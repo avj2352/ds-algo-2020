@@ -6,8 +6,11 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 
 - [Udemy Course](https://www.udemy.com/course/aws-serverless-a-complete-introduction/learn/lecture/7214768#overview)
 - [Youtube Video - Introduction](https://www.youtube.com/watch?v=ubCNZRNjhyo&feature=youtu.be)
+- [AWS - During Testing](https://aws.amazon.com/certification/policies/during-testing/)
+- [AWS - Mind map on MIRO](https://miro.com/app/board/o9J_kl0gapY=/)
+- [AWS - MIRO](https://miro.com/app/board/o9J_kkSKkJM=/)
 
-
+- [AWS - Certification Link])()
 
 ## AWS Account
 
