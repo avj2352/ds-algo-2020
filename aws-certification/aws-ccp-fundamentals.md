@@ -1,24 +1,38 @@
-# AWS - CCP Certification - 2020
+# AWS - CCP  CLF-C01
 
-The course is all about video links and notes regarding the **AWS CCP Certification - Certified Cloud Practitioner
+The course is all about video links and notes regarding the **AWS CCP Certification - Certified Cloud Practitioner** aka **CLF-C01** exam
 
 ## Important Links
 
 - [Udemy Course](https://www.udemy.com/course/aws-serverless-a-complete-introduction/learn/lecture/7214768#overview)
+
 - [Youtube Video - Introduction](https://www.youtube.com/watch?v=ubCNZRNjhyo&feature=youtu.be)
+
 - [AWS - During Testing](https://aws.amazon.com/certification/policies/during-testing/)
+
 - [AWS - Mind map on MIRO](https://miro.com/app/board/o9J_kl0gapY=/)
+
 - [AWS - MIRO](https://miro.com/app/board/o9J_kkSKkJM=/)
 
 - [AWS - Certification Link](https://www.aws.training/)
 
+- [DigitalCloud Training](https://digitalcloud.training/aws-certified-cloud-practitioner-practice-tests/)
+
+  
+
 ## AWS Account
 
 - AWS Login Link: [AWS Link](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&forceMobileApp=0&code_challenge=jTNajgfWFsZLXcEXo3-4QI8OX86k7KpBxNhCzFL4xNs&code_challenge_method=SHA-256)
+
 - Email: `muhammad.talha@raysiti.com`
+
 - Password: `payTm@197`
+
 - User name: `fancium_freelancer_03`
+
 - User ID: `439325467918`
+
+  
 
 ### AWS Certification Account
 
@@ -30,7 +44,9 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 
 
 
-Online AWS Course presented by "Kirstin Duplat"
+>  NOTE: *Online AWS Course presented by "Kirstin Duplat"*
+
+
 
 ## Course Objectives
 
@@ -50,7 +66,7 @@ In this course, you will learn how to:
 
 
 
-## Module 01 - Introduction
+## Introduction
 
 
 
@@ -69,11 +85,33 @@ Online delivery of IT Solutions & IT Infrastructure over the internet
 
 
 
+### Scalability in Cloud Computing
+
+In cloud computing the term - _Scalability_ means the ability to resize your resources as necessary
+
+By using **AWS Cloud Formation**, you have access to consistent, template based environment for development, test & production. 
+
+
+
+### 3 factors to influence agility
+
+The 3 main factors that influence agility are:
+
+-  Increasing speed
+- Ease of experimentation
+- Cultivating a culture of innovation
+
+
+
 ### Elasticity in Cloud Computing
 
 Elasticity is the power to scale computing resources up or down easily. Because AWS cloud compute elastic, it can auto-scale easily
 
-Because 
+
+
+### How you reduce scurity risks ?
+
+Test often, Patch quickly & respond to incidents at Lightning speeds
 
 
 
@@ -91,5 +129,94 @@ Ability of a system to recover from Infrastructure or Service failures. In CC, r
 
 ### Security of Cloud Computing
 
+- Customers are in complete control & ownership of their data, which includes
+  - which region to store data in
+  - how encryption is handled
+  - who holds the encrypted keys
+  - monitor IT resources continually
 
+
+
+## Module 01 - AWS Management Interfaces
+
+Explore convenient options of accessing & using AWS resources
+
+AWS Users can create & manage resources in 3 unique ways
+
+- AWS Management Console (inclues Mobile App) - **Console**
+- AWS Command Line Interface - AWS **CLI**
+- AWS Software Development Kits - AWS **SDK**
+
+| AWS Management Console         | AWS Command Line Interface    | AWS Software Development Kit                |
+| ------------------------------ | ----------------------------- | ------------------------------------------- |
+| Navigation                     | Programming Language agnostic | Ability to use AWS in existing applications |
+| Usability                      | Flexibility to create scripts |                                             |
+| Mobile app (for iOS & Android) |                               |                                             |
+
+### Knowledge Check
+
+1. _Which of the following terms refers to - the power to scale computing resources up or down easily?_
+   1. Elasticity ✅
+
+
+
+## Module 02 - AWS Management Interfaces
+
+
+
+### 01 - EC2 - Elastic Compute Cloud
+
+AWS EC2 **Instances** are used to spin up servers which can be accessed via Security protocols like - SSH, TCP, HTTP
+
+In AWS compute is consumed through the **Elastic Compute Cloud (EC2)** which is a web service from which you can launch "instances" which are essentially VMs running on the AWS KVM (Kernel based Virtual Machine) hypervisor.
+
+- pay as you go
+- a broad selection of Hardware & Software
+- available across global locations
+
+- Software - Amazon Machine Image **AMI**
+- Network - Amazon Virtual Private Cloud **VPC**
+
+
+
+### 02 - EBS - Elastic Block Store
+
+Most EC2 instance types use the **Elastic Block Store (EBS)** for persistent storage. 
+EBS volumes are durable, block-level storage volumes that can be attached to a single EC2 instance. 
+
+There are a several different volume types available that differ in performance characteristics and price. These include: 
+
+- General Purpose SSD (gp2)
+- Provisioned IOPS SSD (io1)
+- Throughput Optimized HDD (st1)
+- Cold HDD (sc1)
+- Magnetic (standard, a previous-generation type)
+
+Each EBS volume is replicated across multiple systems within an Availability Zone (described below) to avoid the risk of data loss if a single hardware component fails. Additionally, users can take **snapshots** of their EBS volumes which are a point-in-time copy of the data.
+
+Snapshots are incremental backups, which means that only the blocks on the device that have changed after your most recent snapshot are saved.
+
+to attach and mount an EBS storage to an EC2 instance 
+
+```bash
+# list block storages
+lsblk
+# mount
+sudo mount /dev/xvdb /mnt
+```
+
+### Knowledge Check
+
+_What are the benefits of using Amazon EC2 instances compared to physical servers in your infrastructure (select two) ?_
+
+- The ability to have different storage requirements ✅
+- Pay only for the capacity you use ✅
+
+- Automated Backups :x:
+
+- Resizable :x:
+
+- The ability to hot-add additional RAM :x:
+
+### 03 - S3 -Amazon Simple Storage Service
 

@@ -1,0 +1,13 @@
+const removeSpace = (arr, result = []) => {
+    if (arr.length == 0) return result;
+    const char = arr.shift();
+    if (char !== ' ') result.push(char);
+    return removeSpace(arr, result);
+};
+
+const removeSpaceExecution = (inputString) => {
+    const result = removeSpace(inputString.split(''));
+    return result.join('');
+};
+
+console.log(`Remove space`, removeSpaceExecution('Hi There'));
