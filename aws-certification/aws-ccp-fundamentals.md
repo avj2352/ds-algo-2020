@@ -2,6 +2,10 @@
 
 The course is all about video links and notes regarding the **AWS CCP Certification - Certified Cloud Practitioner** aka **CLF-C01** exam
 
+- [Taking AWS Online from my home](https://aws.amazon.com/blogs/apn/now-you-can-take-the-aws-certified-cloud-practitioner-exam-at-your-home-or-office-24-7/)
+
+- accessCode: `796-726-541 `
+
 ## Important Links
 
 - [Udemy Course](https://www.udemy.com/course/aws-serverless-a-complete-introduction/learn/lecture/7214768#overview)
@@ -17,6 +21,8 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 - [AWS - Certification Link](https://www.aws.training/)
 
 - [DigitalCloud Training](https://digitalcloud.training/aws-certified-cloud-practitioner-practice-tests/)
+
+- [Freecodecamp - AWS CCP Certification](https://www.youtube.com/watch?v=3hLmDS179YE&t=2s)
 
   
 
@@ -42,8 +48,6 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 - Course Links
   - [AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?transcriptid=E4hlkkgJSEil4GN1VENzog2&id=27076#modules)
 
-
-
 >  NOTE: *Online AWS Course presented by "Kirstin Duplat"*
 
 
@@ -66,11 +70,84 @@ In this course, you will learn how to:
 
 
 
+## About CCP
+
+- Costs: ~$100 USD
+
+- Duration: 90 minutes
+
+- Questions: 65 Questions
+
+  - Multiple choice - radio buttons
+  - Multiple reasons - checkbox
+
+- Passing Score: 70%
+
+- Validity: Valid for 3 years
+
+  
+
+### During Proctured Examination
+
+- The Examiner will ask you to rotate your laptop / camera 360 degrees
+- Wearing Smart watches not allowed
+- Examiner might request to show hands
+
+
+
+### Who is the CCP for ?
+
+- Learning AWS foundational knowledge
+- Shows you've poked around & can use the AWS console
+- :red_circle: Focuses on billing & business-centric concepts
+- Commonly obtained by sales & management to help inform VP & CEOs reasons to utilize AWS.
+
+
+
+### What value does CCP hold ?
+
+
+
+#### CONS
+
+- Not a gilded title
+- Can help superficially increase your **AWS Certification** count
+- [NOT recognised as an important certification for developers on their resumés](https://youtu.be/3hLmDS179YE?t=119)
+
+
+
+#### PROS
+
+- CCP builds confidence for future exams
+- It's an easy win & a confidence booster
+- To become familiar with your test centre
+- Mitigate unknown conditions that can cause stress or distractions for future exam
+- DIRECTLY prepare for [AWS Solution Architect Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+
+
+
+### CCP Exam Guide Outliner
+
+- Cloud Concepts : 28%
+- Security: 24%
+- Technology: 36%
+- Billing & Pricing: 12%
+
+
+
 ## Introduction
 
 
 
+
+
 ### What is Cloud Computing ?
+
+#### 1
+
+The practice of using a network of remote servers hosted on the Internet to store, manage & process data, rather than a local server or a personal computer.
+
+#### 2
 
 Online delivery of IT Solutions & IT Infrastructure over the internet
 
@@ -210,6 +287,7 @@ sudo mount /dev/xvdb /mnt
 _What are the benefits of using Amazon EC2 instances compared to physical servers in your infrastructure (select two) ?_
 
 - The ability to have different storage requirements ✅
+
 - Pay only for the capacity you use ✅
 
 - Automated Backups :x:
@@ -218,5 +296,7 @@ _What are the benefits of using Amazon EC2 instances compared to physical server
 
 - The ability to hot-add additional RAM :x:
 
-### 03 - S3 -Amazon Simple Storage Service
+  
+
+### 03 - S3 - Amazon Simple Storage Service
 
