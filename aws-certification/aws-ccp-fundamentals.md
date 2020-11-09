@@ -3,8 +3,8 @@
 The course is all about video links and notes regarding the **AWS CCP Certification - Certified Cloud Practitioner** aka **CLF-C01** exam
 
 - [Taking AWS Online from my home](https://aws.amazon.com/blogs/apn/now-you-can-take-the-aws-certified-cloud-practitioner-exam-at-your-home-or-office-24-7/)
-
 - accessCode: `796-726-541 `
+- Candidate ID: `AWS01801477`
 
 ## Important Links
 
