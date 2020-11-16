@@ -298,3 +298,16 @@ By the end of this lesson you should
   - Public Sector
   - Super sensitive data
   - Eg: Government, Medical Hospitals
+
+# INSCALE - Topdanmark AWS Related Links
+- [ICE Training Channel](https://teams.microsoft.com/l/channel/19%3a02e4eb66aef1414497c3d845068e87e6%40thread.skype/ICE%20Training?groupId=e979ba4c-4c26-401d-869b-c48901dad3ea&tenantId=d8986036-5135-44ac-b219-a64ab43409d5)
+
+## Miro Link - Mindmap
+
+- https://miro.com/app/board/o9J_kkSKkJM=/ 
+
+## Recording video
+
+- https://web.microsoftstream.com/video/53929061-a74d-4a53-aa8b-6526bc8dd20f?st=1
+- https://web.microsoftstream.com/video/ee3d8aa2-16a7-42f8-9888-90deef489ce3
+- https://web.microsoftstream.com/video/1b855f07-3977-4f6b-80f1-64e2fce4c038?st=3 
