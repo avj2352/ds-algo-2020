@@ -24,8 +24,6 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 
 - [Freecodecamp - AWS CCP Certification](https://www.youtube.com/watch?v=3hLmDS179YE&t=2s)
 
-  
-
 ## AWS Account
 
 - AWS Login Link: [AWS Link](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&forceMobileApp=0&code_challenge=jTNajgfWFsZLXcEXo3-4QI8OX86k7KpBxNhCzFL4xNs&code_challenge_method=SHA-256)
@@ -38,7 +36,6 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 
 - User ID: `439325467918`
 
-  
 
 ### AWS Certification Account
 
@@ -49,8 +46,6 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
   - [AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?transcriptid=E4hlkkgJSEil4GN1VENzog2&id=27076#modules)
 
 >  NOTE: *Online AWS Course presented by "Kirstin Duplat"*
-
-
 
 ## Course Objectives
 
@@ -68,8 +63,6 @@ In this course, you will learn how to:
 - Describe security services with the AWS cloud
 - Define the billing, account management, and pricing models for the AWS platform
 
-
-
 ## About CCP
 
 - Costs: ~$100 USD
@@ -85,15 +78,12 @@ In this course, you will learn how to:
 
 - Validity: Valid for 3 years
 
-  
 
 ### During Proctured Examination
 
 - The Examiner will ask you to rotate your laptop / camera 360 degrees
 - Wearing Smart watches not allowed
 - Examiner might request to show hands
-
-
 
 ### Who is the CCP for ?
 
@@ -102,29 +92,19 @@ In this course, you will learn how to:
 - :red_circle: Focuses on billing & business-centric concepts
 - Commonly obtained by sales & management to help inform VP & CEOs reasons to utilize AWS.
 
-
-
-### What value does CCP hold ?
-
-
-
-#### CONS
+### CONS - What value does CCP hold ?
 
 - Not a gilded title
 - Can help superficially increase your **AWS Certification** count
 - [NOT recognised as an important certification for developers on their resumés](https://youtu.be/3hLmDS179YE?t=119)
 
-
-
-#### PROS
+### PROS - What value does CCP hold ?
 
 - CCP builds confidence for future exams
 - It's an easy win & a confidence booster
 - To become familiar with your test centre
 - Mitigate unknown conditions that can cause stress or distractions for future exam
 - DIRECTLY prepare for [AWS Solution Architect Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
-
-
 
 ### CCP Exam Guide Outliner
 
@@ -133,42 +113,13 @@ In this course, you will learn how to:
 - Technology: 36%
 - Billing & Pricing: 12%
 
-
-
 ## Introduction
-
-
-
-
-
-### What is Cloud Computing ?
-
-#### 1
-
-The practice of using a network of remote servers hosted on the Internet to store, manage & process data, rather than a local server or a personal computer.
-
-#### 2
-
-Online delivery of IT Solutions & IT Infrastructure over the internet
-
-- Scalability
-- Low Cost
-- Reduce Risks
-- Reliable Coverage during disaster
-- Secure data
-- Less time focusing on Infrastructure (Automation)
-- 24/7 availability
-- Auto scaling or elastic
-
-
 
 ### Scalability in Cloud Computing
 
 In cloud computing the term - _Scalability_ means the ability to resize your resources as necessary
 
 By using **AWS Cloud Formation**, you have access to consistent, template based environment for development, test & production. 
-
-
 
 ### 3 factors to influence agility
 
@@ -178,19 +129,13 @@ The 3 main factors that influence agility are:
 - Ease of experimentation
 - Cultivating a culture of innovation
 
-
-
 ### Elasticity in Cloud Computing
 
 Elasticity is the power to scale computing resources up or down easily. Because AWS cloud compute elastic, it can auto-scale easily
 
-
-
 ### How you reduce scurity risks ?
 
 Test often, Patch quickly & respond to incidents at Lightning speeds
-
-
 
 ### Reliability
 
@@ -201,8 +146,6 @@ Ability of a system to recover from Infrastructure or Service failures. In CC, r
 - AWS regions, called Availability Zones - isolated location across demographics
 - Fault tolerance - System can remain operational even if some of the components of the system fail
 - High availability - Always functioning and available, minimum downtime
-
-
 
 ### Security of Cloud Computing
 
@@ -235,11 +178,7 @@ AWS Users can create & manage resources in 3 unique ways
 1. _Which of the following terms refers to - the power to scale computing resources up or down easily?_
    1. Elasticity ✅
 
-
-
 ## Module 02 - AWS Management Interfaces
-
-
 
 ### 01 - EC2 - Elastic Compute Cloud
 
@@ -253,8 +192,6 @@ In AWS compute is consumed through the **Elastic Compute Cloud (EC2)** which is 
 
 - Software - Amazon Machine Image **AMI**
 - Network - Amazon Virtual Private Cloud **VPC**
-
-
 
 ### 02 - EBS - Elastic Block Store
 
@@ -296,7 +233,68 @@ _What are the benefits of using Amazon EC2 instances compared to physical server
 
 - The ability to hot-add additional RAM :x:
 
-  
+## Domain 01 - Cloud Computing
 
-### 03 - S3 - Amazon Simple Storage Service
+- [Youtube Link - Freecodecamp](https://youtu.be/3hLmDS179YE?t=469)
 
+### Objectives
+
+By the end of this lesson you should
+
+- Define AWS cloud & its value proposition
+- Identify different aspects of AWS cloud economics
+- List the different cloud architecture design principles
+
+### What is Cloud Computing ?
+
+- The practice of using a network of remote servers hosted on the Internet to store, manage & process data, rather than a local server or a personal computer.
+
+- Online delivery of IT Solutions & IT Infrastructure over the internet
+  - Scalability
+  - Low Cost
+  - Reduce Risks
+  - Reliable Coverage during disaster
+  - Secure data
+  - Less time focusing on Infrastructure (Automation)
+  - 24/7 availability
+  - Auto scaling or elastic
+
+| On-premise                      | cloud providers                                              |
+| ------------------------------- | ------------------------------------------------------------ |
+| You own the servers             | Someone else owns the servers                                |
+| You hire the IT people          | Someone else hires the IT people                             |
+| You pay or rent the real-estate | Someone else pays or rents the real-estate (called Data-centres) |
+| You take all the risk           | You are only responsible for configuring cloud services & code, someone else takes care of the rest |
+
+### Advantages of Cloud Computing
+
+- [6 Advantages of Cloud Computing](https://youtu.be/3hLmDS179YE?t=735)
+
+1. *Trade capital expense for variable expense*
+2. *Benefit from massive economies of scale*
+3. *Stop guessing the capacity*
+4. *Increase speed & agility*
+5. *Stop spending money on running & maintaining data centres*
+6. *Go global in minutes*
+
+### Types of Cloud Computing
+
+![Types of cloud Computing](./images/image001.jpg)
+
+### Cloud Computing - Deployment Models
+
+- **Cloud** - Services fully available on cloud - Eg: Twilio, Dropbox, Squarespace :slightly_smiling_face:
+  - Extremely low-cost compared to the other two
+  - For Startup companies
+  - Geographically available based on zones/regions
+- **Hybrid** - Using both cloud & on-premise - Eg: Frozen Mountain :slightly_smiling_face:
+  - Ability to deploy on customer location / host online
+  - Flexible
+  - Eg: Insurance companies
+- **On-Premise** - Deploying resources on-premise of the vendor / customer - Eg: Philips :smile: 
+  - Regulations
+  - Private IP
+  - Firewall restrictions
+  - Public Sector
+  - Super sensitive data
+  - Eg: Government, Medical Hospitals
