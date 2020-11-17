@@ -9,20 +9,28 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 ## Important Links
 
 - [Udemy Course](https://www.udemy.com/course/aws-serverless-a-complete-introduction/learn/lecture/7214768#overview)
-
 - [Youtube Video - Introduction](https://www.youtube.com/watch?v=ubCNZRNjhyo&feature=youtu.be)
-
 - [AWS - During Testing](https://aws.amazon.com/certification/policies/during-testing/)
-
 - [AWS - Mind map on MIRO](https://miro.com/app/board/o9J_kl0gapY=/)
-
 - [AWS - MIRO](https://miro.com/app/board/o9J_kkSKkJM=/)
-
 - [AWS - Certification Link](https://www.aws.training/)
-
 - [DigitalCloud Training](https://digitalcloud.training/aws-certified-cloud-practitioner-practice-tests/)
-
 - [Freecodecamp - AWS CCP Certification](https://www.youtube.com/watch?v=3hLmDS179YE&t=2s)
+- [AWS - Mock Question Video Youtube](https://www.youtube.com/watch?v=FXKE1SfityA&list=PL8lrfONBlapn3hLYC54Gorw1wt2yWC0l0&index=2)
+
+# INSCALE - Topdanmark AWS Related Links
+
+- [ICE Training Channel](https://teams.microsoft.com/l/channel/19%3a02e4eb66aef1414497c3d845068e87e6%40thread.skype/ICE%20Training?groupId=e979ba4c-4c26-401d-869b-c48901dad3ea&tenantId=d8986036-5135-44ac-b219-a64ab43409d5)
+
+## Miro Link - Mindmap
+
+- https://miro.com/app/board/o9J_kkSKkJM=/ 
+
+## Recording video
+
+- https://web.microsoftstream.com/video/53929061-a74d-4a53-aa8b-6526bc8dd20f?st=1
+- https://web.microsoftstream.com/video/ee3d8aa2-16a7-42f8-9888-90deef489ce3
+- https://web.microsoftstream.com/video/1b855f07-3977-4f6b-80f1-64e2fce4c038?st=3 
 
 ## AWS Account
 
@@ -219,19 +227,20 @@ lsblk
 sudo mount /dev/xvdb /mnt
 ```
 
-### Knowledge Check
+### 03 - ELB - Elastic Load Balancer
 
-_What are the benefits of using Amazon EC2 instances compared to physical servers in your infrastructure (select two) ?_
+Puts a load balancer infront of instances
 
-- The ability to have different storage requirements ✅
+- Decouples Domain Configuration from Instances
+- Manage incoming traffic
+- Handle downtime
+- Easy to switch between instances
 
-- Pay only for the capacity you use ✅
+There are 3 types of ELBs
 
-- Automated Backups :x:
-
-- Resizable :x:
-
-- The ability to hot-add additional RAM :x:
+- **Application Load Balancer** - HTTP, HTTPS
+- **Network Load Balancer** - TCP, UDP, SSH
+- **Classic Load Balancer**
 
 ## Domain 01 - Cloud Computing
 
@@ -299,15 +308,45 @@ By the end of this lesson you should
   - Super sensitive data
   - Eg: Government, Medical Hospitals
 
-# INSCALE - Topdanmark AWS Related Links
-- [ICE Training Channel](https://teams.microsoft.com/l/channel/19%3a02e4eb66aef1414497c3d845068e87e6%40thread.skype/ICE%20Training?groupId=e979ba4c-4c26-401d-869b-c48901dad3ea&tenantId=d8986036-5135-44ac-b219-a64ab43409d5)
+# Question & Answers
 
-## Miro Link - Mindmap
+### Question 01
 
-- https://miro.com/app/board/o9J_kkSKkJM=/ 
+_Which feature of AWS allows an international company to provide **low latency** applications for its customers around the world ?_
 
-## Recording video
+- Elasticity :x:
+- Fault Tolerance :x:
+- High availability :x::
+- Global Reach ✅
 
-- https://web.microsoftstream.com/video/53929061-a74d-4a53-aa8b-6526bc8dd20f?st=1
-- https://web.microsoftstream.com/video/ee3d8aa2-16a7-42f8-9888-90deef489ce3
-- https://web.microsoftstream.com/video/1b855f07-3977-4f6b-80f1-64e2fce4c038?st=3 
+### Question 02
+
+_Which AWS characteristic describes the ability to acquire resources as you need them & release resources when you donot need them ?_
+
+- High Availability :x:
+- Agility :x:
+- Elasticity ✅
+- Durability :x:
+
+### Question 03
+
+_What are the benefits of using Amazon EC2 instances compared to physical servers in your infrastructure (select two) ?_
+
+- The ability to have different storage requirements ✅
+
+- Pay only for the capacity you use ✅
+
+- Automated Backups :x:
+
+- Resizable :x:
+
+- The ability to hot-add additional RAM :x:
+
+### Question 04
+
+_Which of the following 2 are AWS Database Service (choose two)_
+
+- Amazon RDS :white_check_mark:
+- Amazon Route 53 :x:
+- Amazon S3 :x:
+- Amazon RedShift :white_check_mark:
