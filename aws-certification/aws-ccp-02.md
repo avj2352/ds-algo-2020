@@ -351,6 +351,12 @@ This is a feature turned on by default when there is a Multiple member account.
 
 ## AWS Cost Explorer
 
+Allows you to **visualize**, **understand** & **manage** your AWS costs & usages over time.
+
+- Default reports - Cost driver & Usage trends
+- Use forcasting to get ideas on future workload & costs
+- Visualize - daily or monthly level
+
 
 
 
