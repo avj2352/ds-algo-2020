@@ -2,7 +2,10 @@
 
 | Acronym           | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
+| CloudFront        | Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers. |
+| Cloud Formation   | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. |
 | AWS               | Amazon Web Service                                           |
+| AVM               | Amazon Vending Machine - uses Service Catalogue template to setup Multi-accounts |
 | AMI               | Amazon Machine Image - Save a copy of your server            |
 | RI                | Reserved Instances                                           |
 | SSD               | Solid State Device                                           |
@@ -23,6 +26,7 @@
 | ELB               | Elastic Load Balancer - puts a load balancer infront of the instances. |
 | Web ACL           | Web Access Control List                                      |
 | AWS WAF           | **Web application firewall** (**WAF**) A **web application firewall** (**WAF**) helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources. |
+| TCO               | Total Cost of Ownership                                      |
 
 
 
@@ -357,7 +361,141 @@ Allows you to **visualize**, **understand** & **manage** your AWS costs & usages
 - Use forcasting to get ideas on future workload & costs
 - Visualize - daily or monthly level
 
+## AWS Cost and Usage Report
+
+Generate a detail spreadsheet to help you analyse & understand your AWS costs
+
+- Places reports on S3 bucket
+- Uses Athena to generate the report
+- Use QuickSight to generate graphs
+
+## AWS Budgets
+
+Think of AWS Budgets as - *billing alarms on steriods*!
+
+AWS Budgets allow you to setup alerts if you are nearing / exceeding your defined budgets.
+
+- Create Cost, Usage & Reservation budgets
+- First 2 budgets are free of charge
+- When you use AWS Budgets - Each budget is $0.02 per day  OR ~ $0.60 USD / month
+- 20,000 budget limit 
+- Plan your service usage, service costs & instance reservations
+- Track - monthly, quarterly or yearly levels
+- Get notified via - Email, Chatbot
+
+## TCO Calculator
+
+TCO Calculator stands for - Total Cost of Ownership Calculator
+
+It estimates HOW MUCH YOU WOULD SAVE when moving from on-premise to AWS cloud.
+
+- Generates detailed set of reports for presentation
+- Built on underlying calculation which generate fair assessment of value
+- Helps by reducing the need to invest on large capital expenditures
+- The tool is for approximation purposes only!
+
+## AWS Landing Zones
+
+Helps "Enterprise" level users quickly setup a secure, AWS multi-account architecture.
+
+- Very expensive upfront cost
+- Provides you with a baseline environment to get started with multi-account architecture
+- Uses **Amazon Vending Machine (AVM)** which uses a **Service Catalogue Template** for setting multi-accounts
+- Automatically services login and Single Sign On for customers
+- Implement account baselines using Landing Zone configuration and pipeline
+
+## AWS Quickstarts
+
+Prebuilt Templates by AWS & AWS Partners to help you deploy your popular stacks on AWS.
+
+- Reduce hundreds of manual procedures into few simple steps
+- Composed of 3 parts
+  - Reference architecture for the deployment
+  - AWS Cloudformation template which automate & configure the deployment
+  - Deployment guide explaining the architecture & implementation in detail
+
+## Resource Groups & Tagging
+
+### Tags
+
+Words or Phrases that act as metadata for organizing your AWS resources
+
+### Resource Groups
+
+Collection of AWS resources that share one or more tags. can display based on -
+
+- Metrics
+- Alarms
+- Configuration Settings
+
+While creating a Resource Group, you can create 2 types
+
+- Tag Based
+- Cloud Formation based
+
+# Question & Answers
+
+### Question 01
+
+Which of the following statements are true ? (Choose two)
+
+- Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers :white_check_mark:
+- There are more Availability Zones than Edge Locations, & more Edge Locations than regions in the world :x:
+- There are more Edge Locations than Availability Zones, & more Availability Zones then Regions in the world :white_check_mark:
+- There are more Regions than Availability Zones, & more Availability Zones than Edge Locations in the world :x:
 
 
 
+### Question 02
+
+Which of the following is one of the design principles related to "**Reliability**" in cloud
+
+- Protect data on transit & on rest :x:
+- Automatically recover from failure :white_check_mark:
+- Perform operations as code :x:
+- Go global in minutes :x:
+
+
+
+### Question 03
+
+Which of the following is an - Amazon Domain Name System (DNS) web service ?
+
+- Amazon Route 53 :white_check_mark:
+- Amazon Lightsail :x:
+- AWS Snowball :x:
+- AWS Direct connect :x:
+
+
+
+### Question 04
+
+Which of the following statements are true ? (Choose two)
+
+- "Enterprise" AWS support plan includes Infrastructure Event Management with additional fee :x:
+- "Enterprise" AWS support plan includes Infrastructure Event Management without additional fee :white_check_mark:
+- "Business" AWS support plan includes Infrastructure Event Management with additional fee :white_check_mark:
+- "Business" AWS support plan does not include Infrastructure Event Management at all. :x:
+
+
+
+### Question 05
+
+Under AWS shared responsibility model, which of the following is the responsibility of AWS
+
+- Firewall Configuration :x:
+- Physical security of Infrastructure :white_check_mark:
+- Patching guest operating systems :x:
+- Security groups configuration :x:
+
+
+
+### Question 06
+
+Which of the following helps secure an AWS account
+
+- Use Cloudwatch logs insight :x:
+- Enable AWS Organizations :x:
+- Activate Multi-Factor Authentication (MFA) :white_check_mark:
+- Enable AWS config :x:
 
