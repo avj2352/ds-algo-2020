@@ -37,7 +37,7 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 
 - [AWS Certification Website](https://www.aws.training/)
 - **Username**: pramod.jingade@gmail.com
-- **Password**: zuko2352
+- **Password**: `zuko2352`
 - Course Links
   - [AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?transcriptid=E4hlkkgJSEil4GN1VENzog2&id=27076#modules)
 
