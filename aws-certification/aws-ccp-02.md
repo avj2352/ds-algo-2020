@@ -435,6 +435,8 @@ While creating a Resource Group, you can create 2 types
 
 # Question & Answers
 
+
+
 ### Question 01
 
 Which of the following statements are true ? (Choose two)

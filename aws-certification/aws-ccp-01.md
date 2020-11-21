@@ -32,18 +32,6 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 - https://web.microsoftstream.com/video/ee3d8aa2-16a7-42f8-9888-90deef489ce3
 - https://web.microsoftstream.com/video/1b855f07-3977-4f6b-80f1-64e2fce4c038?st=3 
 
-## AWS Account
-
-- AWS Login Link: [AWS Link](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&forceMobileApp=0&code_challenge=jTNajgfWFsZLXcEXo3-4QI8OX86k7KpBxNhCzFL4xNs&code_challenge_method=SHA-256)
-
-- Email: `muhammad.talha@raysiti.com`
-
-- Password: `payTm@197`
-
-- User name: `fancium_freelancer_03`
-
-- User ID: `439325467918`
-
 
 ### AWS Certification Account
 
