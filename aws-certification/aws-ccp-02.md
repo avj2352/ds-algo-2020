@@ -3,7 +3,7 @@
 | Acronym           | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
 | CloudFront        | Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers. |
-| Cloud Formation   | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. |
+| Cloud Formation   | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. supports **JSON** or **YAML** format. |
 | AWS               | Amazon Web Service                                           |
 | AVM               | Amazon Vending Machine - uses Service Catalogue template to setup Multi-accounts |
 | AMI               | Amazon Machine Image - Save a copy of your server            |
@@ -25,6 +25,8 @@
 | ASG               | Auto Scaling Group - Group multiple servers                  |
 | ELB               | Elastic Load Balancer - puts a load balancer infront of the instances. |
 | Web ACL           | Web Access Control List                                      |
+| NACL              | Network Access Control List                                  |
+| IGW               | Internet Gateway - Enables access to the internet            |
 | AWS WAF           | **Web application firewall** (**WAF**) A **web application firewall** (**WAF**) helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources. |
 | TCO               | Total Cost of Ownership                                      |
 
