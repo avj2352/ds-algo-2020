@@ -1,34 +1,54 @@
 # Acronyms & Full forms
 
-| Acronym           | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| CloudFront        | Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers. |
-| Cloud Formation   | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. supports **JSON** or **YAML** format. |
-| AWS               | Amazon Web Service                                           |
-| AVM               | Amazon Vending Machine - uses Service Catalogue template to setup Multi-accounts |
-| AMI               | Amazon Machine Image - Save a copy of your server            |
-| RI                | Reserved Instances                                           |
-| SSD               | Solid State Device                                           |
-| AZ(s)             | Availability Zones                                           |
-| SNS               | Simple Notification Service                                  |
-| EC2               | Elastic Compute Cloud                                        |
-| EBS               | Elastic Block Storage                                        |
-| S3                | Simple Storage Service                                       |
-| SSM               | Simple Systems Manager *(Roles assigned to developers)*      |
-| VPC               | Virtual Private Cloud                                        |
-| IAM               | Identity & Access Management                                 |
-| MFA               | Multi Factor Authentication                                  |
-| RDS               | Relational Database Service (PostgreSQL like DB)             |
-| Amazon DynamoDB   | AWS Managed NoSQL Database                                   |
-| Amazon DocumentDB | MongoDB compatibility AWS managed Database                   |
-| Amazon Redshift   | Fast, simple, cost-effective data warehousing                |
-| ASG               | Auto Scaling Group - Group multiple servers                  |
-| ELB               | Elastic Load Balancer - puts a load balancer infront of the instances. |
-| Web ACL           | Web Access Control List                                      |
-| NACL              | Network Access Control List                                  |
-| IGW               | Internet Gateway - Enables access to the internet            |
-| AWS WAF           | **Web application firewall** (**WAF**) A **web application firewall** (**WAF**) helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources. |
-| TCO               | Total Cost of Ownership                                      |
+| Acronym               | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| CloudFront            | Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers. |
+| CFN - Cloud Formation | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. supports **JSON** or **YAML** format. |
+| AWS                   | Amazon Web Service                                           |
+| AVM                   | Amazon Vending Machine - uses Service Catalogue template to setup Multi-accounts |
+| AMI                   | Amazon Machine Image - Save a copy of your server            |
+| IoT                   | Internet of Things                                           |
+| RI                    | Reserved Instances                                           |
+| SSD                   | Solid State Device                                           |
+| AZ(s)                 | Availability Zones                                           |
+| SNS                   | Simple Notification Service                                  |
+| SES                   | Simple Email Service                                         |
+| SQS                   | Simple Queue Service                                         |
+| DDoS                  | Distributed Denial of Service - AWS managed security protection |
+| EC2                   | Elastic Compute Cloud                                        |
+| ECS                   | Elastic Container Service                                    |
+| ES                    | Elasticsearch                                                |
+| EB                    | Elastic Beanstalk                                            |
+| EBS                   | Elastic Block Storage                                        |
+| EFS                   | Elastic File Storage                                         |
+| EKS                   | Elastic **Kubernetes** Service                               |
+| MKS                   | Managed **Kafka** Service                                    |
+| KMS                   | Key Management Service                                       |
+| EMR                   | Elastic Map Reduce                                           |
+| S3                    | Simple Storage Service                                       |
+| SWF                   | Simple Workflow Service                                      |
+| SSM                   | Simple Systems Manager *(Roles assigned to developers)*      |
+| TAM                   | Technical Account Manager                                    |
+| VPC                   | Virtual Private Cloud                                        |
+| VPN                   | Virtual Private Network                                      |
+| IAM                   | Identity & Access Management                                 |
+| IDS                   | Intrusion Detection Syst                                     |
+| I                     | Intrusion Protecti                                           |
+| MFA                   | Multi Factor Authentication                                  |
+| RDS                   | Relational Database Service (PostgreSQL like DB)             |
+| Amazon DynamoDB       | AWS Managed NoSQL Database                                   |
+| Amazon DocumentDB     | MongoDB compatibility AWS managed Database                   |
+| Amazon Redshift       | Fast, simple, cost-effective data warehousing                |
+| ASG                   | Auto Scaling Group - Group multiple servers                  |
+| ELB                   | Elastic Load Balancer - puts a load balancer infront of the instances. |
+| ALB                   | Application Load Balancer                                    |
+| NLB                   | Network Load Balancer                                        |
+| Web ACL               | Web Access Control List                                      |
+| NACL                  | Network Access Control List                                  |
+| IGW                   | Internet Gateway - Enables access to the internet            |
+| AWS WAF               | **Web application firewall** (**WAF**) A **web application firewall** (**WAF**) helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources. |
+| MQ                    | Amazon ActiveMQ                                              |
+| TCO                   | Total Cost of Ownership                                      |
 
 
 

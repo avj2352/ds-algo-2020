@@ -329,7 +329,9 @@ ol:last-child {
 
 blockquote {
     font-family: 'Nunito', 'Times New Roman', serif;
+    color: var(--control-link-color);
     margin: 1rem 0 1rem 2rem;
+    font-style: italic;
     position: relative;
 }
 
