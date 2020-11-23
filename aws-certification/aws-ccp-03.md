@@ -318,14 +318,95 @@ Virtual Private Network lets you establish a secure & private tunnel from your n
 
 
 
-## Cloud Names
+## Cloud - Names
 
 The following is a list of names which begin with the prefix - cloud, but have completely different meaning and responsibilities
 
-| Service        | Description                                                  |
+| Service                  | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| CloudFormation           | Infrastructure as code, setup services via temptation eg: YAML, JSON |
+| CloudTrail               | Logs API call between AWS services (who we can blame ?)      |
+| CloudFront               | Content Distribution Network                                 |
+| CloudWatch               | All about Logging, Alerts, Notification                      |
+| :exclamation:CloudSearch | Search Engine, You have an ecommerce website & you want to add a search bar |
+
+
+
+## Connect - services
+
+Lists different services that have the word - "Connect" in them
+
+| Connect        | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
-| CloudFormation | Infrastructure as code,  setup services via temptation eg: YAML, JSON |
-| CloudTrail     | Logs API call between AWS services (who we can blame ?)      |
-|                |                                                              |
-|                |                                                              |
+| Direct Connect | Dedicated Fibre optics connection from Data Center to AWS    |
+| Amazon Connect | Call center service                                          |
+| Media Connect  | New version of Elastic Transcoder, converts video to different video types |
+
+
+
+## Elastic Transcoder vs Media Convert
+
+Both the following services are used for - Transcode videos
+
+| Elastic Transcoder                     | AWS Elemental Media Convert            |
+| -------------------------------------- | -------------------------------------- |
+| The old way of encoding media          | The new way of encoding media          |
+| Transcodes videos to streaming formats | Transcodes videos to streaming formats |
+|                                        | Overlays images (Watermark)            |
+|                                        | Insert Video clips                     |
+|                                        | Extracts captions data                 |
+|                                        | Robust UI                              |
+
+
+
+## SNS vs SQS
+
+Both the following services are used for connecting - Your Applications via Messages
+
+| SNS - Simple Notification Service                            | SES - Simple Email Service                                   | SQS - Simple Queue Service                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Practical & Internal                                         | Professional, Marketing, Emails                              | Scheduled, Queues                                            |
+| Pass along messages eg: PubSub mail service                  | A cloud based email service Eg: Twilio SendGrid              | Queue up messages, Guaranteed Delivery                       |
+| Send notification to subscribers of topics via multiple protocol eg: HTTP, Email, SQS, SMS | Supports Lambda operations                                   | Places messages into a queue. Applications pull queue using AWS SDK |
+| SNS is generally used for sending "plain text emails". Best eg: Billing alarms | SES can send HTML email, SNS cannot                          |                                                              |
+| Can retry sending in case of failure of HTTPS                | - SES can receive inbound emails. <br/> - SES can create Email template <br/>- Custom domain name email <br/>- Monitor your email reputation | - Can retain a message upto 14 days<br />- Can send msgs in a sequential order or in parallel<br />- Can ensure only one message is sent<br />- Can ensure msgs delivered atleast once |
+| Really good for web-hooks, simple internal emails, triggering lambda functions |                                                              | Really good for delayed tasks, queueing up emails            |
+| Eg: Pusher, PubNub                                           |                                                              | Eg: RabbitMQ, Sidekiq                                        |
+
+
+
+## Inspector vs Trusted Advisor
+
+Both are Security tools & they both perform audits
+
+| Amazon Inspector                                             | Trusted Advisor                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Audits a single EC2 instance you've selected                 | Gives you a holistic view of recommendations across multiple services & best practices |
+| Generates a report from a long list of security checks i.e., :exclamation:699 checks | Doesn't generate out a PDF report                            |
+| Generates PDF report                                         | You should enable MFA on your root account when using trusted advisor. |
+
+## AWS Artifact vs AWS Inspector
+
+Both Artifact & Inspector compile out PDFs
+
+| AWS Artifact                                                 | AWS Inspector                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Why should an enterprise trust AWS ?                         | How do we know this EC2 instance is Secure ?                 |
+| Generates a security report that's based on **global compliance frameworks** | Runs a script that analyze your EC2 instance then generates a PDF report telling you which security check has passed |
+| Eg: Service Organization Control (SOC) & Payment Card Industry (PCI) | Audit Tool for security of EC2 instances                     |
+
+
+
+## ALB vs NLB vs CLB
+
+All of the above deal with Load balancing when it comes to AWS Services
+
+> NOTE: can attach Amazon Certification Manager (ACM) SSL certificate
+
+|     Application      |                           Network                            |                        Classic (old)                         |
+| :------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|   Layer 7 Requests   |                   Layer 4 IP protocol data                   |                      Layer 4 & Layer 7                       |
+| HTTP & HTTPS traffic |   TCP & TLS traffic where extreme performance is required    | Intended for applications that were built within the EC2-class network |
+|    Can attach WAF    | Capable of handling millions of requests per second while maintaining ultra-low-latencies |                  Doesn't use Target  groups                  |
+|                      | Optimized for sudden & volatile traffic patterns while using a single static IP address per availability zone. |                                                              |
 
