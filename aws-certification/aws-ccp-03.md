@@ -312,3 +312,20 @@ Virtual Private Network lets you establish a secure & private tunnel from your n
 - **AWS Site-to-Site VPN**: securely connect on-premises network or branch office to VPC.
 - **AWS Client VPN**: securely connect users to AWS network or on-premises networks.
 
+
+
+# Variation Study
+
+
+
+## Cloud Names
+
+The following is a list of names which begin with the prefix - cloud, but have completely different meaning and responsibilities
+
+| Service        | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| CloudFormation | Infrastructure as code,  setup services via temptation eg: YAML, JSON |
+| CloudTrail     | Logs API call between AWS services (who we can blame ?)      |
+|                |                                                              |
+|                |                                                              |
+
