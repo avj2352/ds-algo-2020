@@ -60,16 +60,16 @@ You can create, access, and manage your VPCs using any of the following interfac
 
 The following is a list of 8 Database services offered by AWS -
 
-| Database          | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| DynamoDB          | NoSQL key/value database (eg: **Cassandra / Firebase**)      |
-| DocumentDB        | NoSQL Document database that is **MongoDB** compatible       |
-| RDS               | Relational Database Service that supports multiple engines (Engines - **MySQL, PostgreSQL, Maria DB, Oracle, Microsoft SQL server, Aurora**) |
-| Aurora            | **MySQL** (5x faster) & **PostgreSQL** (3x faster) database fully managed Relational Database - greater performance. Also more expensive. Enterprise level. |
-| Aurora Serverless | Database that only runs when you need it - just like AWS Lambda services. Most in-expensive RDS |
-| Neptune           | Managed Graph Database                                       |
-| Redshift          | Columnar Database, Petabyte warehouse (1000 TB = 1 PB !!)    |
-| Elasticache       | **Redis** or **Memcached** database. Used for Caching solutions. Open-source |
+| Database           | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| DynamoDB           | NoSQL key/value database (eg: **Cassandra / Firebase**)      |
+| DocumentDB         | NoSQL Document database that is **MongoDB** compatible       |
+| RDS                | Relational Database Service that supports multiple engines (Engines - **MySQL, PostgreSQL, Maria DB, Oracle, Microsoft SQL server, Aurora**) |
+| Aurora             | **MySQL** (5x faster) & **PostgreSQL** (3x faster) database fully managed Relational Database - greater performance. Also more expensive. Enterprise level. |
+| Aurora Server less | Database that only runs when you need it - just like AWS Lambda services. Most in-expensive RDS |
+| Neptune            | Managed Graph Database                                       |
+| Redshift           | Columnar Database, Petabyte warehouse (1000 TB = 1 PB !!)    |
+| Elasticache        | **Redis** or **Memcached** database. Used for Caching solutions. Open-source |
 
 ## Provisioning Services
 
@@ -89,9 +89,9 @@ The following is a list of Computing services offered by AWS
 | ----------------- | ------------------------------------------------------------ |
 | EC2               | Elastic Cloud Compute - Highly configurable server. consists of CPU, Memory, Network & Operating system. |
 | ECS               | Elastic Container Service - Imagine ***Docker as a Service*** - A Highly scalable, high-performance, container orchestration service that supports Docker containers, pay for EC2 instances. |
-| Fargate           | Microservices where you dont think about the infrastructure. Play per task. It's an evolution of ECS. |
+| Fargate           | Microservices where you don't think about the infrastructure. Play per task. It's an evolution of ECS. |
 | EKS               | Elastic Kubernetes Service - Imagine ***Kubernetes as a Service*** - easy to deploy, manage & scale containerized applications using Kubernetes. |
-| Lambda            | Lambda Serverless Functions, run code without provisioning or managing servers. You pay only for the compute time you consume |
+| Lambda            | Lambda Server less Functions, run code without provisioning or managing servers. You pay only for the compute time you consume |
 | Elastic Beanstalk | orchestrates various other AWS services including, EC2, S3, SNS, Cloudwatch, Autoscaling & Elastic Load Balancers |
 | AWS Batch         | plans, schedules & executes your batch computing workloads across the full range of AWS compute services, such as - EC2 & Spot instances. |
 
@@ -106,7 +106,7 @@ The following is a list of  services offered by AWS related to Storage & data ac
 | Storage Gateway | Hybrid Cloud storage with local caching 1. File gateway, 2. Volume gateway 3. Tape Gateway. Extension of on-prem storage to cloud. |
 | EBS             | Elastic Block Storage - Unlike S3, it consists of virtual Hard-drives that you attach to your EC2 instances for storage. Only attach to one EC2 instance per EBS. |
 | EFS             | Elastic File Storage - File storage solution, mountable to multiple EC2 instances at the same time. |
-| Snowball        | Physically migrate alot of data via a computer science - 50-80 TB |
+| Snowball        | Physically migrate a lot of data via a computer science - 50-80 TB |
 | Snowball Edge   | A Better version of Snowball - ~100 TB                       |
 | Snowmobile      | Shipping container, pulled by a Semi-trailer truck - 100 PB  |
 
@@ -123,8 +123,8 @@ Consists of AWS Enterprise related services
 | WorkDocs       | A content creation & collaboration service - AWS version of Sharepoint - CRUD content |
 | Chime          | AWS solution for Online Meetings, Video Conferencing, Business calling. Similar to Skype + Slack |
 | WorkMail       | AWS service for managed Business emails. Online GMail for AWS. |
-| Pinpoint       | Marketing Campaign Management system, send E-newletters,  Targetted emails, SMS, Push notifications. |
-| SES            | Simple Email Service - Cloud based email service designed for marketters & application developers to send marketting, notifications & email. Supports HTML content emails unlike SNS which only sends simple unicode emails. |
+| Pinpoint       | Marketing Campaign Management system, send E-newsletters,  Targeted emails, SMS, Push notifications. |
+| SES            | Simple Email Service - Cloud based email service designed for marketers & application developers to send marketing, notifications & email. Supports HTML content emails unlike SNS which only sends simple Unicode emails. |
 | Quicksight     | A Business Intelligence BI service. Generate & share visualizations, charts. |
 
 ## Enterprise Integration
@@ -160,7 +160,7 @@ List of AWS services for Logging & Monitoring purposes.
 
 The following diagrams show the shared responsibility model between a AWS customer & AWS management
 
-### HighLevel Overview
+### High-level Overview
 
 ![High Level Overview](./images/image004.jpg)
 

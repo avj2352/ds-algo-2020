@@ -3,7 +3,7 @@
 The course is all about video links and notes regarding the **AWS CCP Certification - Certified Cloud Practitioner** aka **CLF-C01** exam
 
 - [Taking AWS Online from my home](https://aws.amazon.com/blogs/apn/now-you-can-take-the-aws-certified-cloud-practitioner-exam-at-your-home-or-office-24-7/)
-- accessCode: `796-726-541 `
+- Access Code: `796-726-541 `
 - Candidate ID: `AWS01801477`
 
 ## Important Links
@@ -75,7 +75,7 @@ In this course, you will learn how to:
 - Validity: Valid for 3 years
 
 
-### During Proctured Examination
+### During Proctored Examination
 
 - The Examiner will ask you to rotate your laptop / camera 360 degrees
 - Wearing Smart watches not allowed
@@ -98,7 +98,7 @@ In this course, you will learn how to:
 
 - CCP builds confidence for future exams
 - It's an easy win & a confidence booster
-- To become familiar with your test centre
+- To become familiar with your test center
 - Mitigate unknown conditions that can cause stress or distractions for future exam
 - DIRECTLY prepare for [AWS Solution Architect Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
 
@@ -159,7 +159,7 @@ Explore convenient options of accessing & using AWS resources
 
 AWS Users can create & manage resources in 3 unique ways
 
-- AWS Management Console (inclues Mobile App) - **Console**
+- AWS Management Console (includes Mobile App) - **Console**
 - AWS Command Line Interface - AWS **CLI**
 - AWS Software Development Kits - AWS **SDK**
 
@@ -217,7 +217,7 @@ sudo mount /dev/xvdb /mnt
 
 ### 03 - ELB - Elastic Load Balancer
 
-Puts a load balancer infront of instances
+Puts a load balancer in front of instances
 
 - Decouples Domain Configuration from Instances
 - Manage incoming traffic
@@ -271,7 +271,7 @@ By the end of this lesson you should
 2. *Benefit from massive economies of scale*
 3. *Stop guessing the capacity*
 4. *Increase speed & agility*
-5. *Stop spending money on running & maintaining data centres*
+5. *Stop spending money on running & maintaining data centers
 6. *Go global in minutes*
 
 ### Types of Cloud Computing
@@ -309,7 +309,7 @@ _Which feature of AWS allows an international company to provide **low latency**
 
 ### Question 02
 
-_Which AWS characteristic describes the ability to acquire resources as you need them & release resources when you donot need them ?_
+_Which AWS characteristic describes the ability to acquire resources as you need them & release resources when you don't need them ?_
 
 - High Availability :x:
 - Agility :x:
