@@ -410,3 +410,184 @@ All of the above deal with Load balancing when it comes to AWS Services
 |    Can attach WAF    | Capable of handling millions of requests per second while maintaining ultra-low-latencies |                  Doesn't use Target  groups                  |
 |                      | Optimized for sudden & volatile traffic patterns while using a single static IP address per availability zone. |                                                              |
 
+
+
+# Questions & Answers
+
+### Question 01
+
+_AWS RDS supports six database engines. From the list below, choose three engines supported by Amazon RDS? (Choose 3 answers)_
+
+- Oracle :white_check_mark:
+- MySQL :white_check_mark:
+- DB2 :x:
+- FoxPro :x:
+- Microsoft SQL :white_check_mark:
+
+#### Explanation
+
+Amazon RDS is available on several database instance types - optimized for memory, performance, or I/O - and provides you with six familiar database engines to choose from, including Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, and SQL Server.
+
+Although you can host other databases on EC2 Instances, only the above are natively supported by the Amazon Relational Database Management Service (RDS)
+
+Ref: https://youtu.be/eMzCI7S1P9M
+
+
+
+### Question 02
+
+_One of the seven design principals of the Security Pillar in the Well-Architected Framework refers to the concept of applying security at all layers. Which two firewall options can you configure to protect your EC2 Instances deployed in a VPC? (Choose 2 answers)_
+
+- IAM Groups :x:
+- Security Groups :white_check_mark:
+- AWS WAF :x:
+- Amazon Macie :x:
+- NACLs :white_check_mark:
+
+#### Explanation
+
+- NACLs are firewalls that protect the entire subnet and allow you to define both allow and deny rules for traffic that flows into and out of the subnet. This protects your EC2 Instance the Subnet. 
+
+- Security Groups are firewalls that protect the individual EC2 Instance and further restrict what traffic can be allowed to the instance.
+
+- Amazon Macie is an incorrect answer. Amazon Macie is a security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS. Amazon Macie recognizes sensitive data such as personally identifiable information (PII) or intellectual property (such as your corporate application source codes) and provides you with dashboards and alerts that give visibility into how this data is being accessed or moved. The fully managed service continuously monitors data access activity for anomalies and generates detailed alerts when it detects the risk of unauthorized access or inadvertent data leaks. Amazon Macie is available to protect data stored in Amazon S3.
+
+- AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits. AWS WAF can be used to control how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you configure.
+
+- IAM Groups are an incorrect answer. IAM Groups are designed to club together IAM Users who share common job functions and grant IAM Policies to. These have nothing to do with protecting network traffic to EC2 instances.
+
+  
+
+### Question 03
+
+_Which storage solution enables you to share a common file system across multiple Linux based EC2 Instances that can be used to support applications which require access to data with very low latency connectivity?_
+
+- NTFS :x:
+- S3 :x:
+- EFS :white_check_mark:
+
+- EBS :x:
+
+#### Explanation
+
+- Amazon EFS is a fully managed service providing shared file system storage for Linux workloads. It provides a simple interface allowing you to create and configure file systems quickly and manages the file storage infrastructure for you, removing the complexity of deploying, patching, and maintaining the underpinnings of a file system. You can use to provide your application that runs on multiple EC2 instances to share a common file system that offers very low latency connectivity.
+
+- The answer, “EBS” is incorrect because although you can configure a file system on EBS Volumes, you cannot share an EBS volume across multiple EC2 Instances.
+
+- The answer, “S3” is incorrect because it is not a file system. Also, EFS would offer much lower latency. Amazon S3 is object storage and ideally used to host assets such as documents, images, and videos which can be referenced by web applications.
+
+- The answer, “NTFS” is incorrect because this is a file system, specifically a Windows File System and not the actual storage option.
+
+
+
+### Question 04
+
+_Your organization hosts multiple AWS Accounts with multiple VPCs. You would like to connect these VPCs together and centrally manage connectivity policies. Which AWS service enables you to connect multiple VPCs configured as a hub that controls how traffic is routed among all the connected networks which act like spokes?_
+
+- AWS Transit Gateway :white_check_mark:
+- AWS VPC Peering :x:
+- AWS Global Accelerator :x:
+- AWS Virtual Private Gateway :x:
+
+#### Explanation
+
+- AWS Transit Gateway is a service that enables customers to connect their Amazon Virtual Private Clouds (VPCs) and their on-premises networks to a single gateway. This allows you to connect your on-premise network and all your VPCs in a hub and spoke configuration which significantly simplifies management and reduces operational costs because each network only has to connect to the Transit Gateway and not to every other network.
+
+- The answer, ‘AWS Global Accelerator’, is incorrect. AWS Global Accelerator is a service that improves the availability and performance of your applications with local or global users. It provides static IP addresses that act as a fixed entry point to your application endpoints in a single or multiple AWS Regions, such as your Application Load Balancers, Network Load Balancers, or Amazon EC2 instances.
+
+- The answer, ‘AWS VPC Peering’, is incorrect. While VPC Peering allows you to connect two VPCs to each other, It goes not enable you to centrally manage multiple VPCs connections centrally. You could configure all your VPCs with individual peering connections, but this becomes very difficult to manage.
+
+- The answer, ‘AWS Virtual Private Gateway’, is incorrect. AWS Virtual Private Gateway is a component of your Site to Site VPN connection that needs to be configured to build out a VPC tunnel with your on-premise network.
+
+- Ref: https://aws.amazon.com/transit-gateway/
+
+
+
+### Question 05
+
+_You wish to configure a bucket that will enforce a policy that enables anonymous to access its content if they connect to the data from the Corporate and branch offices as part of your security strategy. Which S3 configuration feature will enable you to define the IP Ranges from where you will allow access to the data?_
+
+- NTFS Permissions :x:
+- Bucket Policy :white_check_mark:
+- NACLs :x:
+- Security Groups :x:
+
+#### Explanation
+
+- S3 bucket policies specify what actions are allowed or denied for which principals on the bucket that the bucket policy is attached to. Bucket Policies enable you to also define conditional statements so that you can restrict access based on location for example. Also, note that S3 supports bucket policies of up 20 kb.
+
+- Security Groups is an incorrect answer because these are used to protect EC2 Instances by enabling you to only allow traffic inbound/outbound on specific ports
+
+- NTFS Permissions is an incorrect answer. NTFS (NT File System) permissions are available to drives formatted with NTFS. The advantage with NTFS permissions is that they affect local users as well as network users and they are based on the permission granted to each individual user at the Windows logon, regardless of where the user is connecting.
+
+- Network Access Control Lists (NACLs) is an incorrect answer. NACL is a VPC Firewall security services that enable you to configure which inbound and outbound ports you can open at a subnet level,
+
+- Ref: https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-acls-oh-my-controlling-access-to-s3-resources/
+
+
+
+### Question 06
+
+_Which AWS Service enables developers to analyze and debug applications, identifying the root cause of performance issues and errors?_
+
+- AWS CloudTrail :x:
+- AWS X-Ray :white_check_mark:
+- Access Analyzer :x:
+- AWS Trusted Advisor
+
+#### Explanation
+
+- AWS X-Ray helps developers analyze and debug production, distributed applications, such as those built using a microservices architecture. With X-Ray, you can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors.
+
+- The answer, ‘AWS CloudTrail’ is incorrect. AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
+
+- The answer, ‘AWS Trusted Advisor’ is incorrect. AWS Trusted Advisor provides real-time guidance to help you provision your resources following AWS best practices. To help you maximize utilization of Reserved Instances, AWS Trusted Advisor checks your Amazon EC2 computing-consumption history and calculates an optimal number of Partial Upfront Reserved Instances. Recommendations are based on the previous calendar month's hour-by-hour usage aggregated across all consolidated billing accounts.
+
+
+
+### Question 07
+
+_Which AWS Service can be used to capture, transform, and load streaming data into Amazon S3, Amazon Redshift, Amazon Elasticsearch Service, and Splunk, enabling near real-time analytics with existing business intelligence?_
+
+- AWS Kinesis Firehose :white_check_mark:
+- AWS Kinesis Video Streams :x:
+- AWS S3 :x:
+- AWS Athena :x:
+
+#### Explanation
+
+- Amazon Kinesis Data Firehose provides a simple way to capture, transform, and load streaming data with just a few clicks in the AWS Management Console. It is integrated with Amazon S3, Amazon Redshift, and Amazon Elasticsearch Service and you can capture, transform, and load streaming data. From the AWS Management Console, you can point Kinesis Data Firehose to an Amazon S3 bucket, Amazon Redshift table, or Amazon Elasticsearch domain.
+
+- The answer ‘Kinesis Video Streams’ is incorrect. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing. Kinesis Video Streams automatically provisions and elastically scales all the infrastructure needed to ingest streaming video data from millions of devices.
+
+- The answer, ‘Amazon Athena’ is incorrect. Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+
+- The answer, ‘Amazon S3’ is incorrect. Amazon S3 is an Object Storage solution offered by AWS, allowing to store an unlimited amount of data in the cloud where every object is stored as a complete object. Objects contain extensive metadata and Amazon S3 is often used to store static content that can be used as digital assets for your websites or even archival data for long term retention.
+
+
+
+### Question 08
+
+_Which VPC Component enables to you grant Internet access to servers in the public subnet deployed in the VPC?_
+
+- Internet Gateway :white_check_mark:
+- Security Group :x:
+- NAT Gateway :x:
+- VPC Peering :x:
+
+#### Explanation
+
+An internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the internet. It, therefore, imposes no availability risks or bandwidth constraints on your network traffic.
+
+An internet gateway serves two purposes: to provide a target in your VPC route tables for internet-routable traffic and to perform network address translation (NAT) for instances that have been assigned public IPv4 addresses.
+
+The answer, ‘NAT Gateway’, is incorrect as this is used to enable Internet access for servers deployed in the private subnet
+
+The answer, ‘VPC Peering’, is incorrect. A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. Instances in either VPC can communicate with each other as if they are within the same network.
+
+![img](https://img-a.udemycdn.com/redactor/raw/2020-07-29_15-40-21-90c540f2ea85bf4588e814923175a58a.jpg?IsYNtdLFtP5E32zDgacWW-Zr2ruiBFV9nxJS-1V9u18PEntgCvxWdQKU_RUWCgArGXpNR2eWfDNd_n8S7hwpgYu7qeWxY189sshOA-aSvL2-XND9M1LIIlRg2Ch-SMEMc1ZRrrovBQNOlkIJNY4HCTz9yOslhPPZLn-0E4VmZvbh-elI)
+
+The answer, ‘Security Group’, is incorrect. Security Groups act as virtual firewalls for your instances to control inbound and outbound traffic to them. This ensures that only the necessary traffic is permitted inbound to those servers.
+
+Ref: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
+

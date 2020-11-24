@@ -338,3 +338,92 @@ _Which of the following 2 are AWS Database Service (choose two)_
 - Amazon Route 53 :x:
 - Amazon S3 :x:
 - Amazon RedShift :white_check_mark:
+
+### Question 05
+
+_Which type of EBS volume would you recommend for a high-performance application that is particularly sensitive to high latency?_
+
+- General Purpose SSD (gp2) :x:
+- EBS Provisioned IOPS SSD (io1) :white_check_mark:
+- Throughput Optimized HDD (st1) :x:
+- Cold HDD (sc1) :x:
+- Magnetic (standard, a previous-generation type) :x:
+
+#### Explanation
+
+- IO1 is backed by solid-state drives (SSDs) and is the highest performance EBS storage option designed for critical, I/O intensive database and application workloads, as well as throughput-intensive database and data warehouse workloads, such as HBase, Vertica, and Cassandra. These volumes are ideal for both IOPS-intensive and throughput-intensive workloads that require extremely low latency.
+
+- The answer “EBS General Purpose SSD (gp2) is incorrect and ideally suited to non-intensive workloads.
+
+- The answer “EBS Throughput Optimized HSS (st1) is incorrect as there is no such.
+
+
+
+### Question 06
+
+_Which of the following describes a benefit of cloud computing that relates to its ability to scale out and scale in resources based on demand?_
+
+- CAPEX :x:
+- Elasticity :white_check_mark:
+- Rapid Expansion :x:
+
+- High Availability :x:
+
+#### Explanation
+
+- In cloud computing, elasticity is defined as "the degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner, such that at each point in time the available resources match the current demand as closely as possible".
+
+- The answer “High Availability” is incorrect. Although a benefit of Cloud Computing it does not relate to this specific question.
+
+- The answer “Rapid Expansion” is incorrect. Although by using Cloud Computing you can rapidly expand your technology stack, it does not demonstrate how you can scale out and scale in based on demand.
+
+- The answer “CAPEX” is incorrect. Although a benefit of cloud computing it relates more to the fact that you can leverage cloud resources on a pay as you go model and thus invest in IT using an OPEX strategy rather than CAPEX.
+
+
+
+### Question 07
+
+_Which Amazon S3 Storage Class enables you to optimize costs by automatically moving data to the most cost-effective access tier, while ensuring that frequently access data is made available immediately?_
+
+- Amazon Glacier :x:
+- Amazon S3 Standard :x:
+- Amazon S3 One-Zone IA :x:
+- Amazon S3 Intelligent Training :white_check_mark:
+
+#### Explanation
+
+- The S3 Intelligent-Tiering storage class is designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead. It works by storing objects in two access tiers: one tier that is optimized for frequent access and another lower-cost tier that is optimized for infrequent access. For a small monthly monitoring and automation fee per object, Amazon S3 monitors access patterns of the objects in S3 Intelligent-Tiering and moves the ones that have not been accessed for 30 consecutive days to the infrequent access tier. If an object in the infrequent access tier is accessed, it is automatically moved back to the frequent access tier.
+
+- The answer “S3 Standard” is incorrect as it does not ensure cost-efficiency to your data
+
+- The answer “S3 One-Zone IA” is incorrect. While it is cheaper than S3 Standard, it does not ensure automatically moving data to the most cost-effective storage when not required and then moving back to a storage class that makes the data rapidly accessible.
+
+- The answer “Amazon Glacier” is incorrect as while it is the cheapest available on the platform, it does not offer the ability to make data instantly available when required. Retrieving data from Glacier can take a bit of time depending on the retrieval option.
+
+
+
+### Question 08
+
+_Which of the following AWS services enables you to quickly launch a webserver with a pre-configured WordPress installation pack, offers predictable monthly pricing, comes with integrated certificate management, and provides free SSL/TLS certificates?_
+
+- AWS Elastic Beanstalk :x:
+- AWS EC2 :x:
+- AWS Lightsail :white_check_mark:
+- AWS RDS :x:
+
+#### Explanation
+
+- AWS LightSail offers virtual servers that are easy to set up and manage. AWS LightSail servers offer preconfigured virtual specifications for your servers, with predictable pricing strategy. You can launch your website, web application, or project in minutes, and manage your instance from the intuitive LightSail console or API. Applications like WordPress can be launched preconfigured making it very easy to provision a website within minutes and where you do not need the complexity associated with manually configuring an EC2 server such as storage, load balancing, and certificate management.
+
+- LightSail also offers free SSL/TLS certificates that can be provisioned and added to a load balancer in just a few clicks.
+
+- The answer, ‘AWS EC2’, is incorrect because EC2 offers much for configuration options and individual components such as configuring a server with WordPress and other web applications have to be managed separately or via scripts. Furthermore, you will need to configure your own Elastic Load Balancers and install SSL Certs, etc.
+
+- As your requirements become more complex, you can easily upgrade your LightSail environment and move to EC2 with a simple, guided experience.
+
+- The answer, ‘AWS RDS’ is incorrect because AWS RDS is a managed database solution and not a virtual server solution to host websites and applications like WordPress
+
+- The answer, ‘Elastic Beanstalk’ is incorrect as it is a platform service enabling you to automatically provision an entire infrastructure environment to support application code that you can upload.
+
+- Ref: https://aws.amazon.com/lightsail/features/
+
