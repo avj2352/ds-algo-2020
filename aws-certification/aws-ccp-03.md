@@ -71,6 +71,8 @@ The following is a list of 8 Database services offered by AWS -
 | Redshift           | Columnar Database, Petabyte warehouse (1000 TB = 1 PB !!)    |
 | Elasticache        | **Redis** or **Memcached** database. Used for Caching solutions. Open-source |
 
+> NOTE: Amazon RDS supports the following databases only - Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, and Microsoft SQL Server.
+
 ## Provisioning Services
 
 | Services          | Description                                                  |
@@ -590,4 +592,210 @@ The answer, ‘VPC Peering’, is incorrect. A VPC peering connection is a netwo
 The answer, ‘Security Group’, is incorrect. Security Groups act as virtual firewalls for your instances to control inbound and outbound traffic to them. This ensures that only the necessary traffic is permitted inbound to those servers.
 
 Ref: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
+
+
+
+### Question 09
+
+_Which Amazon S3 Storage Class enables you to optimize costs by automatically moving data to the most cost-effective access tier, while ensuring that frequently access data is made available immediately?_
+
+- Amazon Glacier :x:
+- Amazon S3 Standard :x:
+- Amazon S3 One-Zone IA :x:
+- Amazon S3 Intelligent Tiering :white_check_mark:
+
+#### Explanation
+
+- The S3 Intelligent-Tiering storage class is designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead. It works by storing objects in two access tiers: one tier that is optimized for frequent access and another lower-cost tier that is optimized for infrequent access. For a small monthly monitoring and automation fee per object, Amazon S3 monitors access patterns of the objects in S3 Intelligent-Tiering and moves the ones that have not been accessed for 30 consecutive days to the infrequent access tier. If an object in the infrequent access tier is accessed, it is automatically moved back to the frequent access tier.
+
+- The answer “S3 Standard” is incorrect as it does not ensure cost-efficiency to your data
+
+- The answer “S3 One-Zone IA” is incorrect. While it is cheaper than S3 Standard, it does not ensure automatically moving data to the most cost-effective storage when not required and then moving back to a storage class that makes the data rapidly accessible.
+
+- The answer “Amazon Glacier” is incorrect as while it is the cheapest available on the platform, it does not offer the ability to make data instantly available when required. Retrieving data from Glacier can take a bit of time depending on the retrieval option.
+
+
+
+### Question 10
+
+_Which of the following AWS services enables you to quickly launch a webserver with a pre-configured WordPress installation pack, offers predictable monthly pricing, comes with integrated certificate management, and provides free SSL/TLS certificates?_
+
+- AWS Lightsail :white_check_mark:
+
+- AWS EC2 :x:
+- AWS EB :x:
+- AWS RDS :x:
+
+#### Explanation
+
+- AWS LightSail offers virtual servers that are easy to set up and manage. AWS LightSail servers offer preconfigured virtual specifications for your servers, with predictable pricing strategy. You can launch your website, web application, or project in minutes, and manage your instance from the intuitive LightSail console or API. Applications like WordPress can be launched preconfigured making it very easy to provision a website within minutes and where you do not need the complexity associated with manually configuring an EC2 server such as storage, load balancing, and certificate management.
+
+LightSail also offers free SSL/TLS certificates that can be provisioned and added to a load balancer in just a few clicks.
+
+- The answer, ‘AWS EC2’, is incorrect because EC2 offers much for configuration options and individual components such as configuring a server with WordPress and other web applications have to be managed separately or via scripts. Furthermore, you will need to configure your own Elastic Load Balancers and install SSL Certs, etc.
+
+As your requirements become more complex, you can easily upgrade your LightSail environment and move to EC2 with a simple, guided experience.
+
+- The answer, ‘AWS RDS’ is incorrect because AWS RDS is a managed database solution and not a virtual server solution to host websites and applications like WordPress
+
+- The answer, ‘Elastic Beanstalk’ is incorrect as it is a platform service enabling you to automatically provision an entire infrastructure environment to support application code that you can upload.
+
+Ref: https://aws.amazon.com/lightsail/features/
+
+
+
+### Question 11
+
+_Which AWS service enables you to perform heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora_
+
+- AWS Database conversion service :x:
+- AWS Database Migration service :white_check_mark:
+- AWS EKS :x:
+- AWS Snowball :x:
+
+#### Explanation
+
+The AWS Database Migration Service can migrate your data to and from the most widely used commercial and open-source databases. The service supports homogeneous migrations such as Oracle to Oracle, as well as heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora or Microsoft SQL Server to MySQL.
+
+The answer, AWS Snowball is incorrect. Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of the AWS cloud. Using Snowball addresses common challenges with large-scale data transfers including high network costs, long transfer times, and security concerns.
+
+The answer, AWS EKS is incorrect. Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service.
+
+The answer, AWS Database Conversion Service is incorrect as there is no such service.
+
+Ref: https://youtu.be/ouia1Sc5QGo
+
+### Question 12
+
+Which AWS services enables you to track all API activity in your AWS account regardless of whether the activity was performed using the AWS Management Console of the Command Line Interface?
+
+- AWS API Log
+- AWS Trusted Advisor
+- AWS CloudTrail :white_check_mark:
+- AWS Config
+
+#### Explanation
+
+You can use CloudTrail to view, search, download, archive, analyze, and respond to account activity across your AWS infrastructure. You can identify who or what took which action, what resources were acted upon, when the event occurred, and other details to help you analyze and respond to activity in your AWS account.
+
+The answer, ‘AWS Config’ is incorrect. AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations
+
+The answer, Trusted Advisor’ is incorrect. AWS Trusted Advisor provides real-time guidance to help you provision your resources following AWS best practices. To help you maximize utilization of Reserved Instances, AWS Trusted Advisor checks your Amazon EC2 computing-consumption history and calculates an optimal number of Partial Upfront Reserved Instances. Recommendations are based on the previous calendar month's hour-by-hour usage aggregated across all consolidated billing accounts.
+
+The answer, ‘API Log’ is incorrect as there is no such service.
+
+Ref: https://youtu.be/mXQSnbc9jMs
+
+### Question 13
+
+_You are building a multi-tier architecture with web servers placed in the public subnet and application servers placed in the private subnet of your VPC. You need to deploy Elastic Load Balancers to distribute traffic to both the web-server farm and the application server farm. Which type of load balancer would you choose to distribute traffic to your application servers?_
+
+- Internet-facing :x:
+- Static load balancers :x:
+- Internal load balancers :white_check_mark:
+- Dynamic load balancers :x:
+
+#### Explanation
+
+When you create a load balancer, you must choose whether to make it an internal load balancer or an internet-facing load balancer. In a multi-tier architecture, as described above, you would deploy an internal load balancer to distribute traffic from the webservers to the application servers. The nodes of an internal load balancer have only private IP addresses. The DNS name of an internal load balancer is publicly resolvable to the private IP addresses of the nodes. Therefore, internal load balancers can only route requests from clients with access to the VPC for the load balancer.
+
+The answer “Internet-facing” is incorrect as this configuration is used to support traffic the web-servers from users on the Internet
+
+The answers “Dynamic load balancers” and “Static load balancers” are incorrect as there is no such service.
+
+Ref: https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html#load-balancer-scheme
+
+
+
+### Question 14
+
+_You have launched a VPC in your AWS Account. You have been asked if it is possible to establish connectivity from your on-premise network to the VPC enabling your Developers with seamless access to production workloads deployed in the VPC from the on-premise network. Which connectivity strategy will enable you to establish this connection over the standard public Internet while keeping costs to a minimum?_
+
+- Setup a Direct Connect Connection between on-premise network and VPC :x:
+
+- This cannot be done :x:
+
+- Setup a Snowball Service :x:
+
+- Setup a Hardware VPC Connection between your on-premise network and the VPC
+
+  :white_check_mark:
+
+  
+
+#### Explanation
+
+You can create a hardware virtual private network (VPN) connection between your corporate data center and your VPC and leverage the AWS Cloud as an extension of your corporate data center.
+
+You can alternatively use Direct Connect to configure connectivity between the on-premise network and the cloud. However, this is the most expensive and uses private network connectivity.
+
+Ref: https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/network-to-amazon-vpc-connectivity-options.html
+
+### Question 15
+
+_Your company hosts various workloads across multiple AWS Accounts. Which AWS service can help you maximize on your total spend across all accounts by combining your accounts in a group and thus benefiting from volume discounts?_
+
+- AWS Organization :white_check_mark:
+- AWS Budgets :x:
+- AWS Bulk Subscribe :x:
+- AWS Cost Explorer :x:
+
+#### Explanation
+
+You can use the consolidated billing feature in AWS Organizations to consolidate billing and payment for multiple AWS accounts or multiple Amazon Internet Services Pvt. Ltd (AISPL) accounts. You can combine the usage across all accounts in the organization to share the volume pricing discounts, Reserved Instance discounts, and Savings Plans. This can result in a lower charge for your project, department, or company than with individual standalone accounts.
+
+The answer, ‘AWS Bulk Subscribe’, is incorrect as there is no such service.
+
+The answer, ‘AWS Cost Explorer’, is incorrect. AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS costs and usage over time. However, using the service does not help you benefit from volume discounts.
+
+The answer ‘AWS Budgets’, is incorrect. AWS Budgets gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount.
+
+Ref: https://youtu.be/T4NK8fv8YdI
+
+### Question 16
+
+_Which AWS Service enables companies looking to migrate to the AWS Cloud obtain copies of various compliance documents such as ISO certifications, Payment Card Industry (PCI), and Service Organization Control (SOC) reports?_
+
+- AWS Artifact :white_check_mark:
+- AWS Security Reports :x:
+- AWS Config :x:
+- AWS CloudWatch :x:
+
+#### Explanation
+
+AWS Artifact provides on-demand access to AWS’ security and compliance reports and select online agreements. Reports available in AWS Artifact include our Service Organization Control (SOC) reports, Payment Card Industry (PCI) reports, and certifications from accreditation bodies across geographies and compliance verticals that validate the implementation and operating effectiveness of AWS security controls.
+
+Ref: https://youtu.be/ILEoLqpbfXM
+
+### Question 17
+
+_Which AWS EC2 pricing option can help you reduce costs by allowing you to use your existing server-bound software licenses?_
+
+- Reserved :x:
+- On-Demand :x:
+- Spot :x:
+- Dedicated Hosts :white_check_mark:
+
+#### Explanation
+
+Dedicated Hosts allow you to use your existing per-socket, per-core, or per-VM software licenses, including Microsoft Windows Server, Microsoft SQL Server, SUSE Linux Enterprise Server, Red Hat Enterprise Linux, or other software licenses that are bound to VMs, sockets, or physical cores, subject to your license terms.
+
+When you launch instances on a Dedicated Host, the instances run on a physical server that is dedicated to your use. While Dedicated instances also run on dedicated hardware, Dedicated Hosts provide further visibility and control by allowing you to place your instances on a specific, physical server. This enables you to deploy instances using configurations that help address corporate compliance and regulatory requirements.
+
+Ref: https://aws.amazon.com/ec2/pricing/
+
+### Question 18
+
+_When retrieving data from Amazon Glacier, what is the typical time taken to make a Standard archive available?_
+
+- 5 minutes :x:
+- 90 seconds :x:
+- 24 hours :x:
+- 3 to 5 hours :white_check_mark:
+
+#### Explanation
+
+It takes 3 to 5 hours to prepare a Glacier archive to be available for download using the Standard Retrieval Option.
+
+Ref: https://youtu.be/EKaJENJqD8E
 

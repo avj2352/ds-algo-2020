@@ -427,3 +427,25 @@ _Which of the following AWS services enables you to quickly launch a webserver w
 
 - Ref: https://aws.amazon.com/lightsail/features/
 
+
+
+### Question 09
+
+_Which of the following services offered by AWS are considered global services? (Choose 2 answers)_
+
+-  Route53 :white_check_mark:
+- Amazon RDS :x:
+- Express Route :x:
+- Elastic Compute Cloud (EC2) :x:
+- Identity and Access Management (IAM) :white_check_mark:
+
+#### Explanation
+
+Amazon Identity and Access Management (IAM) is a global identity service. You do not need to select a specific region to create IAM Users, Groups, or Roles as these entities are defined globally in your AWS Account and thus are unique throughout the globe.
+
+Similarly, Route53 is a global DNS and Routing service enabling you to define global DNS records for your application and help you build highly available, fault-tolerant, and business-specific traffic routing solutions for your applications.
+
+EC2 and Amazon RDS are both regional services and you need to define the region you want to deploy these services in and so these are incorrect answers.
+
+Express Route is an incorrect answer because this is a Microsoft product and nothing to do with AWS.
+
