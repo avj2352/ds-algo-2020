@@ -52,9 +52,66 @@ You can create, access, and manage your VPCs using any of the following interfac
 - **AWS SDKs** — Provides language-specific APIs and takes care of many of the connection details, such as calculating signatures, handling request retries, and error handling, see [AWS SDKs](http://aws.amazon.com/tools/#SDKs).
 - **Query API** — Provides low-level API actions that you call using HTTPS requests. Using the Query API is the most direct way to access Amazon VPC, see the [Amazon EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/).
 
+![VPC architecture](./images/image014.jpg)
+
 
 
 # AWS Services
+
+## Network Services
+
+AWS offers wide variety of network services that can be configured using - GUI, CLI & API endpoints. 
+
+Important concepts of networking are:
+
+- IP subnetting
+- Routing & Gateways
+- OSI Model
+- Network virtualization
+
+>  An IP (Internet Protocol) is a label used to identify a computer on a shared network
+
+- IPv4 - has been around for much longer
+- IPv6 - supports much larger address space
+- IPv4 - 32 bit number
+- Consists of - NETWORK identifier and a HOST identifier
+
+> A subnet mask is prefix which determines which portion of the address is NETWORK & which port is a HOST identifier
+
+![OSI model](./images/image017.jpg)
+
+### VPC
+
+A Virtual Private Cloud is an isolated network environment on AWS. Think of it as private data center on cloud.
+
+With VPC,  you can specify your own CIDR blocks, create IPv4, IPv6 addresses.
+
+- VPC are created within an AWS region
+- VPC Subnets are created within a AWS Availability Zone
+
+
+
+### How Subnets work
+
+- A VPC subnet is created within an Availability Zone
+- You can have a minimum of 2 Subnets (as there are a min of 2 AZs) in each region
+- Subnets can be either created as Private or Public.
+- Private Subnet (Intranet) can ONLY be accessed via the AWS NAT gateway (NAT)
+- Public Subnets can be be accessible publicly using the AWS Internet gateway (IGW)
+- Each subnet must be associated to a route table
+- Subnet : Route table association is 1 is to Many relationship
+
+
+
+### VPN
+
+A Virtual Private Network is extending your VPC on AWS to public or untrusted network. 
+
+### AWS Direct Connect
+
+Another alternative to VPN is to create a secure private network and use internet to connect your On-premise network to AWS.
+
+
 
 ## Database Services
 
@@ -580,6 +637,8 @@ _Which VPC Component enables to you grant Internet access to servers in the publ
 #### Explanation
 
 An internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the internet. It, therefore, imposes no availability risks or bandwidth constraints on your network traffic.
+
+![Internet Gateway](./images/image015.jpg)
 
 An internet gateway serves two purposes: to provide a target in your VPC route tables for internet-routable traffic and to perform network address translation (NAT) for instances that have been assigned public IPv4 addresses.
 

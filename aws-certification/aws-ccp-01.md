@@ -9,6 +9,7 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 ## Important Links
 
 - [Udemy Course](https://www.udemy.com/course/aws-serverless-a-complete-introduction/learn/lecture/7214768#overview)
+- [AWS CCP Certification CHEAT SHEET](https://digitalcloud.training/certification-training/aws-certified-cloud-practitioner/)
 - [Youtube Video - Introduction](https://www.youtube.com/watch?v=ubCNZRNjhyo&feature=youtu.be)
 - [AWS - During Testing](https://aws.amazon.com/certification/policies/during-testing/)
 - [AWS - Mind map on MIRO](https://miro.com/app/board/o9J_kl0gapY=/)
@@ -448,4 +449,24 @@ Similarly, Route53 is a global DNS and Routing service enabling you to define gl
 EC2 and Amazon RDS are both regional services and you need to define the region you want to deploy these services in and so these are incorrect answers.
 
 Express Route is an incorrect answer because this is a Microsoft product and nothing to do with AWS.
+
+
+
+### Question 10
+
+_When instantiating compute resources, which are the 2 techniques for using automated, repeatable processes that are fast & avoid human error_
+
+- Snapshotting :x:
+- Bootstrapping :white_check_mark:
+- Infrastructure as code :white_check_mark:
+- Performance monitoring :x:
+- Fault Tolerance :x:
+
+#### Explanation
+
+- With infrastructure as code, AWS assets are programmable and can avoid human error
+- With bootstrapping you can execute automated actions to modify default configurations
+- Snapshotting relates to data saving and not instantiating
+- Fault Tolerance is a method of increasing the availability of your resource and is not a technique
+- Performance monitoring has nothing to do with instantiating
 

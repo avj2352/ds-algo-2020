@@ -1,4 +1,33 @@
-## Simple Concepts in AWS I don't know
+## AWS Definitions
+
+### Hypervisor
+
+When used in Cloud computing, the Operating system that is directly installed on top of the hardware is called - **Hypervisor**. It is on top of this Hypervisor that additional, multiple Operating Systems are installed as Virtual Machines (VMs)
+
+- A VM is container within which virtualized resources are installed - vCPU, vRAM
+- Example of Type 01 Hypervisor include - VMWare ESXi & Microsoft Hyper-V
+- Example of Type 02 Hypervisor include - VMWare workstation & Oracle Virtual Box
+- Until now, Amazon was using the Xen Hypervisor which is now transitioned to KVM (Kernel based Virtual Machine)
+
+
+
+### ELB & Auto Scaling
+
+AWS provides ELB & Auto-scaling to evenly distribute incoming connections and make sure the right amount of instances are available to service the load. It does this using Elastic Load Balancer & Auto-scaling
+
+![ELB Architecture](./images/image015.jpg)
+
+Elastic Load Balancer provides the following benefits -
+
+- High Availability - Automatically distributes incoming traffic across multiple EC2 instances
+- Security - Certificate management, SSL / TLS Encryption
+
+EC2 Auto scaling complements the architecture by automatically DYNAMICALLY scaling the number of EC2 instances depending on the load
+
+Auto scaling provides -
+
+- Fault Tolerance - Auto scaling detects when an instance is unhealthy & replaces it
+- Scalability & Elasticity
 
 
 
@@ -14,17 +43,6 @@ NACLs are firewalls that protect the entire subnet and allow you to define both 
 
 
 
-### Amazon Macie
-
-> :exclamation:Remember MACIE is present in MACHINE LEARNING
-
-- Amazon Macie is a security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS. 
-- Amazon Macie recognizes sensitive data such as personally identifiable information (PII) or intellectual property (such as your corporate application source codes) and provides you with dashboards and alerts that give visibility into how this data is being accessed or moved. 
-- The fully managed service continuously monitors data access activity for anomalies and generates detailed alerts when it detects the risk of unauthorized access or inadvertent data leaks. 
-- Amazon Macie is available to protect data stored in Amazon S3.
-
-
-
 ### AWS WAF
 
 AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits. 
@@ -33,15 +51,25 @@ AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps
 
 
 
-### EFS vs S3
+### EFS vs S3 vs EBS
 
-| EFS                                                          | S3                                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Shared File System                                           | S3 is Object Storage                                         |
-| Common file system across multiple Linux based EC2 Instances | Used mainly for Web applications files / objects / images storage |
-| It provides a simple interface allowing you to create and configure file systems quickly and manages the file storage infrastructure for you, removing the complexity of deploying, patching, and maintaining the underpinnings of a file system. | Ideally used to host assets such as documents, images, and videos which can be referenced by web applications. |
+| EFS                                                          | S3                                                           | EBS                                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Shared File System                                           | S3 is Object Storage                                         | Elastic Block Storage                                        |
+| :exclamation: Remember - One EFS can be used to support MANY EC2 instances. EFS is based on Network File System (Unix / Linux) | Provides a Flat hierarchy of storage. The topmost level containers are called Buckets. High scalability. Supports REST, SOAP & HTTP access. | EBS Volumes are durable, block-level storage volumes that can be attached to SINGLE EC2 instance only. |
+| EFS is a Regional Service. Stores data across mulitple AZs   |                                                              |                                                              |
+| Ideal for Hierarchical data ie., Folders, Files. Ideal to store documents, Audit, E-papers, DB Backups, shared corporate directories, content management | Used mainly for Web applications files / objects / images storage. Can also store files, images, video, audio | Ideal for DB, Disk Images, VMS.                              |
+| It provides a simple interface allowing you to create and configure file systems quickly and manages the file storage infrastructure for you, removing the complexity of deploying, patching, and maintaining the underpinnings of a file system. | Ideally used to host assets such as documents, images, and videos which can be referenced by web applications. | Most EC2 instance types use EBS for persistent storage.      |
 
+### EBS Volume Types
 
+- General Purpose SSD (gp2)
+- Provisioned IOPS SSD (io1)
+- Throughput optimized HDD (st1)
+- Cold HDD (sc1)
+- Magnetic (standard, a previous generation type)
+
+![EC2 types](./images/image013.jpg)
 
 ### IAM Policies vs Bucket Policies
 
@@ -164,3 +192,41 @@ Amazon Athena is an interactive query service that makes it easy to analyze data
 
 
 
+### Amazon Macie
+
+> :exclamation:Remember MACIE is present in MACHINE LEARNING
+
+- Amazon Macie is a security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS. 
+- Amazon Macie recognizes sensitive data such as personally identifiable information (PII) or intellectual property (such as your corporate application source codes) and provides you with dashboards and alerts that give visibility into how this data is being accessed or moved. 
+- The fully managed service continuously monitors data access activity for anomalies and generates detailed alerts when it detects the risk of unauthorized access or inadvertent data leaks. 
+- Amazon Macie is available to protect data stored in Amazon S3.
+
+
+
+### Amazon Glacier
+
+> [About Amazon S3 Glacier](https://aws.amazon.com/glacier/)
+
+Amazon S3 Glacier and S3 Glacier Deep Archive are a secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup. They are designed to deliver 99.999999999% durability, and provide comprehensive security and compliance capabilities that can help meet even the most stringent regulatory requirements. 
+
+- Customers can store data for as little as $1 per terabyte per month, a significant savings compared to on-premises solutions. 
+- To keep costs low yet suitable for varying retrieval needs, Amazon S3 Glacier provides three options for access to archives, from a few minutes to several hours, and S3 Glacier Deep Archive provides two access options ranging from 12 to 48 hours.
+-  Expedited retrievals typically return data in 1-5 minutes, and are great for [Active Archive](https://aws.amazon.com/archive/) use cases.
+- Standard retrievals typically complete between 3-5 hours, and work well for less time-sensitive needs like backup data, media editing, or long-term analytics. 
+- Bulk retrievals are the lowest-cost retrieval option, returning large amounts of data within 5-12 hours. The Amazon S3 Glacier Deep Archive storage class provides two retrieval options ranging from 12-48 hours.
+
+
+
+### Amazon Snowball
+
+> [About Amazon Snowball](https://aws.amazon.com/snowball/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
+
+Snowball moves terabytes of data in about a week. You can use it to move things like databases, backups, archives, healthcare records, analytics datasets, IoT sensor data and media content, especially when network conditions prevent realistic timelines for transferring large amounts of data both into and out of AWS.
+
+With Amazon Snowball, you can transfer 100s of Terabytes or Petabytes of data between your on-premise data centres & Amazon Simple Storage Service (S3).
+
+- Snowball can import to S3 or export from S3
+- Snowball - 80TB (upto 50TB allowed in the USA)
+- Snowball Edge - 100TB comes with onboard storage & compute capabilities
+- Snowball supports specific Amazon EC2 instance types and AWS Lambda functions, so you can develop and test in the AWS Cloud, then deploy applications on devices in remote locations to collect, pre-process, and ship the data to AWS. 
+- Common use cases include data migration, data transport, image collation, IoT sensor stream capture, and machine learning.

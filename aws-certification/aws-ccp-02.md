@@ -2,6 +2,7 @@
 
 | Acronym               | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
+| OSI Model             | Open Systems Intercomm Model - a standard for network communication |
 | CloudFront            | Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers. |
 | CFN - Cloud Formation | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. supports **JSON** or **YAML** format. |
 | AWS                   | Amazon Web Service                                           |
@@ -25,15 +26,15 @@
 | MKS                   | Managed **Kafka** Service                                    |
 | KMS                   | Key Management Service                                       |
 | EMR                   | Elastic Map Reduce                                           |
-| S3                    | Simple Storage Service                                       |
+| S3                    | Simple Storage Service. A Key / Value based storage system built to store & retrieve huge amount of data. |
 | SWF                   | Simple Workflow Service                                      |
 | SSM                   | Simple Systems Manager *(Roles assigned to developers)*      |
 | TAM                   | Technical Account Manager                                    |
 | VPC                   | Virtual Private Cloud                                        |
 | VPN                   | Virtual Private Network                                      |
 | IAM                   | Identity & Access Management                                 |
-| IDS                   | Intrusion Detection Syst                                     |
-| I                     | Intrusion Protecti                                           |
+| IDS                   | Intrusion Detection System                                   |
+| IPS                   | Intrusion Protection System                                  |
 | MFA                   | Multi Factor Authentication                                  |
 | RDS                   | Relational Database Service (PostgreSQL like DB)             |
 | Amazon DynamoDB       | AWS Managed NoSQL Database                                   |
@@ -76,9 +77,23 @@
 - Not all services are available in all regions
 - :exclamation:**US-EAST-1** is the region where you see all your billing information
 - 5 new regions - under progress
-
 - [AWS regional Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html)
 - [3D world Model - AWS Regions](https://www.infrastructure.aws/)
+
+
+
+:exclamation: :exclamation:The following table classifies AWS services based on their scope (Global or Regional Level)
+
+| Global Scope / Service | Regional Scope / Service |
+| ---------------------- | ------------------------ |
+| AWS Route 53           | AWS EC2                  |
+| AWS CloudFront         | AWS Lambda               |
+| AWS IAM                | AWS S3                   |
+| AWS STS                |                          |
+
+> AWS S3 has global namespace, but buckets & objects are created on regional level
+>
+> By default all AWS STS requests go to the single endpoint: https://sts.amazonaws.com
 
 ## Availability Zones (AZs)
 
@@ -101,10 +116,15 @@ us-east-1f
 
 - **Multi-AZ:** Distributing your instances across multiple AZs allows failover configuration for handling requests when one goes down
 - <10ms latency between AZz in a region
+- :exclamation:AZs are physically separated in a typical metropolitan area and are located in a low risk flood plain
+- AZs use discrete UPS & onsite backup generation facilities & are fed via different grid from independent facilities
+- AZs are all redundantly connected to mutiple tier-1 Transit Providers
 
 ## Edge Locations
 
 An Edge location is a datacenter owned by a **partner trusted by AWS** which has a direct connection to the AWS network.
+
+>  Edge locations are condent delivery network (CDN) endpoints for CloudFront
 
 - :exclamation:These locations serve requests for **CloudFront** & **Route 53**.
 - Requests going to these services will be routed to the nearest edge location automatically
@@ -137,7 +157,31 @@ AWS GovCloud Regions allow customers to host sensitive **Controlled Unclassified
 - You get 10 free alarms as part of your basic account
 - **SNS** - *Simple Notification Service* - Basic Email Alert
 
-## Change IAM Users Sign-in Link
+
+
+# IAM & Authentication
+
+Identity Federation (login using Active Directory AD, Facebook) can be configured allowing secure access to AWS resources without configuring IAM accounts 
+
+- IAM supports PCI DSS compliance
+- You can create only 2 Access keys to a particular user at a time
+- These can be used to make programmatic calls to AWS when using the API, AWS CLI or AWS management.
+- IAM users can be created to access AWS applications and these are called - "service accounts"
+- You can have upto 5000 user per AWS account
+
+### IAM Roles
+
+- IAM roles can be used for granting applications running on EC2 instances permission to AWS API requests using **instance profiles**
+
+### IAM Policies
+
+- Policies are documents that assign permission & can be used with Users, Roles & Groups
+- Policy documents are written in JSON format
+- All Permissions are denied by default
+- Least restrictive permissions are applied
+- **IAM policy simulator tool** is to help you understand, test & validate the effects of Access Control policies.
+
+
 
 ### Customize Account Alias
 
@@ -173,6 +217,36 @@ There are 3 different types of MFA device that you can assign to your root accou
 
 - Select the Accordian - Click on Setup a Password policy
 - Follow the instructions provided - [in the link](https://youtu.be/3hLmDS179YE?t=2926)
+
+
+
+## AWS STS
+
+The AWS Security Token Service is to enable you to request - temporary, limited privilege for IAM users OR for the users that you authenticate (Federated access)
+
+### Benefits of AWS STS
+
+- You can provide access to your AWS resources without creating an AWS identity for them
+- The temporary security credentials have limited lifetime
+- After the temporary security credentials expire, they cannot be used.
+
+The AWS STS API action returns a temporary security credential which consists of 
+
+- AWS access key ID
+- Key secret
+- A Session token
+
+## IAM Best Practices
+
+- Lock away the Root User access keys
+- Always create individual IAM users
+- Use AWS defined policies to assign permissions whenever possible
+- Use Groups
+- Grant least privilege
+- Enable MFA for privileged users
+- :exclamation:Dont generate access key for the root account user
+- :exclamation: Whenever possible, use IAM roles with temporary security credentials instead of Long-term access keys
+- :exclamation:Manage IAM user access keys properly
 
 # Pricing Models
 
@@ -461,7 +535,7 @@ While creating a Resource Group, you can create 2 types
 
 ### Question 01
 
-Which of the following statements are true ? (Choose two)
+_Which of the following statements are true ? (Choose two)_
 
 - Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers :white_check_mark:
 - There are more Availability Zones than Edge Locations, & more Edge Locations than regions in the world :x:
@@ -472,7 +546,7 @@ Which of the following statements are true ? (Choose two)
 
 ### Question 02
 
-Which of the following is one of the design principles related to "**Reliability**" in cloud
+_Which of the following is one of the design principles related to "**Reliability**" in cloud_
 
 - Protect data on transit & on rest :x:
 - Automatically recover from failure :white_check_mark:
@@ -483,7 +557,7 @@ Which of the following is one of the design principles related to "**Reliability
 
 ### Question 03
 
-Which of the following is an - Amazon Domain Name System (DNS) web service ?
+_Which of the following is an - Amazon Domain Name System (DNS) web service ?_
 
 - Amazon Route 53 :white_check_mark:
 - Amazon Lightsail :x:
@@ -494,7 +568,7 @@ Which of the following is an - Amazon Domain Name System (DNS) web service ?
 
 ### Question 04
 
-Which of the following statements are true ? (Choose two)
+_Which of the following statements are true ? (Choose two)_
 
 - "Enterprise" AWS support plan includes Infrastructure Event Management with additional fee :x:
 - "Enterprise" AWS support plan includes Infrastructure Event Management without additional fee :white_check_mark:
@@ -505,7 +579,7 @@ Which of the following statements are true ? (Choose two)
 
 ### Question 05
 
-Under AWS shared responsibility model, which of the following is the responsibility of AWS
+_Under AWS shared responsibility model, which of the following is the responsibility of AWS_
 
 - Firewall Configuration :x:
 - Physical security of Infrastructure :white_check_mark:
@@ -522,4 +596,28 @@ Which of the following helps secure an AWS account
 - Enable AWS Organizations :x:
 - Activate Multi-Factor Authentication (MFA) :white_check_mark:
 - Enable AWS config :x:
+
+
+
+### Question 07
+
+_When using Amazon IAM, what authentication methods are available to use (choose two) ?_
+
+- Client certificates :x:
+- Access Keys :white_check_mark:
+- Amaon KMS :x:
+- Server Certificates :white_check_mark:
+- AES 256 :x:
+
+### Explanation
+
+- Supported authentication methods include
+  - Console Password
+  - Access Keys
+  - Server Certificates (SSL / TLS)
+- Client certificates are not a valid authentication method
+- :exclamation: Amazon KMS is used for managing encrypted keys and not for authentication
+- AES 256, is an encryption algorithm, not an authentication method.
+
+
 
