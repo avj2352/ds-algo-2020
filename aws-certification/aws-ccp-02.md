@@ -4,6 +4,7 @@
 | --------------------- | ------------------------------------------------------------ |
 | OSI Model             | Open Systems Intercomm Model - a standard for network communication |
 | CloudFront            | Amazon **Cloud Front** services enable caching of content at the nearest Edge Locations for fast distribution to customers. |
+| CIDR                  | Classless Inter-Domain Routing (CIDR) - Route table for eg: 10.0.0.0/16 |
 | CFN - Cloud Formation | Models & provisions a collection of related AWS resources & 3rd party resources so you can launch & configure them together as a stack. Uses Infrastructure as code. supports **JSON** or **YAML** format. |
 | AWS                   | Amazon Web Service                                           |
 | AVM                   | Amazon Vending Machine - uses Service Catalogue template to setup Multi-accounts |
@@ -21,6 +22,7 @@
 | ES                    | Elasticsearch                                                |
 | EB                    | Elastic Beanstalk                                            |
 | EBS                   | Elastic Block Storage                                        |
+| ENI                   | Elastic Network Interface - Logical networking component of a VPC |
 | EFS                   | Elastic File Storage                                         |
 | EKS                   | Elastic **Kubernetes** Service                               |
 | MKS                   | Managed **Kafka** Service                                    |
@@ -32,6 +34,7 @@
 | TAM                   | Technical Account Manager                                    |
 | VPC                   | Virtual Private Cloud                                        |
 | VPN                   | Virtual Private Network                                      |
+| VIF                   | Virtual Interfaces - Each AWS Direct connect can be configured with one or more VIFs |
 | IAM                   | Identity & Access Management                                 |
 | IDS                   | Intrusion Detection System                                   |
 | IPS                   | Intrusion Protection System                                  |
@@ -135,7 +138,7 @@ An Edge location is a datacenter owned by a **partner trusted by AWS** which has
 
 AWS GovCloud Regions allow customers to host sensitive **Controlled Unclassified Information** & other types of regulated workloads.
 
->  *Useful If you want to build something to a Government or Government related industry.*
+>  Useful If you want to build something to a Government or Government related industry.
 
 - :exclamation:**Only** operated by employees who are U.S citizens, on U.S soil
 - :exclamation:**Only** accessible to U.S entities & root account holders who pass a screening test
@@ -156,6 +159,19 @@ AWS GovCloud Regions allow customers to host sensitive **Controlled Unclassified
 - You need to select **CloudWatch** service for billing alarms
 - You get 10 free alarms as part of your basic account
 - **SNS** - *Simple Notification Service* - Basic Email Alert
+- Volume discounts are available, which means, The more you use, the cheaper the service gets
+
+### Free Services
+
+Free Services include the following:
+
+- Amazon VPC
+- Elastic Beanstalk *(not the resources)*
+- CloudFormation *(not the resources)*
+- IAM - Identity & Access Management
+- AutoScaling *(not the resources)*
+- OpsWorks
+- Consolidated Billing
 
 
 
@@ -252,39 +268,47 @@ The AWS STS API action returns a temporary security credential which consists of
 
 There are 4 models of payment when it comes to using AWS services
 
+> There are 2 ways of Paying for EC2 instances which can help you reduce spend - 1. RESERVED & 2. SPOT instances
+
 1. **On-Demand** **Instances** - Least Commitment
 
    When you launch an EC-2 instance, it is by default On-Demand pricing.
 
-   1. :exclamation: *no upfront payment*
-   2. :exclamation: *no long-term commitment*
-   3. *low cost & flexible*
-   4. *only pay per hour*
-   5. *perfect for short-term, spiky, unpredictable loads*
-   6. *cannot be interrupted*
-   7. *for first-time apps*
+>  Good for users who want a low cost & flexibility of EC2 without any up-front payments or long-term commitments.
+
+> Also good for short-term, spiky & unpredictable workloads that should not be interrupted
+
+- :exclamation: *no upfront payment*
+
+- :exclamation: *no long-term commitment*
+
+- *low cost & flexible*
+
+- *only pay per hour*
+
+- *perfect for short-term, spiky, unpredictable loads*
+- :exclamation: *cannot be interrupted*
+- _for first-time applications_
 
 2. **Reserved Instances - RI** - upto 75% off
-
    1. _steady state or predictable state_
    2. _commit to EC2 over 1 or 3 year term_
    3. _can resell unused reserved instances_
 
-3. **Spot Instances** - upto 90% savings
+> Good for applications that have a predictable usage, that need reserved-capacity and for users who commit for a 1-3 year term.
 
+3. **Spot Instances** - upto 90% savings
    1. *request space computing capacity*
    2. *flexible start & end dates*
    3. *can handle interruptions (server randomly stopping & starting)*
    4. _For non critical background jobs_
 
-   
-
 4. **Dedicated Host Instances**  - Most expensive
-
    1. _you get Dedicated servers_
    2. _can be on-demand or reserved (upto 70% off)_
    3. _when you need a guarantee of isolated hardware_
    4. _for enterprise requirements_
+   5. _When you want to leverage existing out-bound server licenses such as Windows Server, Suse Linux Server...etc.,_
 
 ## 1. On Demand Instances / Pricing
 
@@ -342,12 +366,29 @@ AWS has **unused compute capacity** that they want to utilise the max capacity o
 
 This module talks about billing & pricing when it comes to using AWS services
 
+- The 3 driving forces for Billing are
+  - *Compute*
+  - *Storage*
+  - *Outbound* Data Transfer
+- Outbound Data is aggregated across services  & then charged at Outbound data transfer rate
+
 ## Free Services
 
 <img src="./images/image002.jpg" alt="Free Services" style="zoom:100%;" />
 
 - These services are free to use
+
 - However they can provision other AWS services which can cost money
+
+- Pricing policies include
+
+  - Pay as you go
+  - Pay less when you reserve
+  - Pay even less as your services grow
+  - Pay less when AWS grows
+  - Custom Pricing (for Enterprise)
+
+  
 
 ## AWS Support Plans
 
@@ -434,6 +475,7 @@ This is a feature turned on by default when there is a Multiple member account.
 - Consolidates your billing & payment methods across multiple AWS accounts into one bill
 - For Billing - AWS treats all accounts UNDER one organization as if they were one account
 - This service is free of cost
+- Limited to 20 linked accounts (by default)
 - use **Cost explorer** to visualize your consolidated billing
 
 ### Volume Discounts
@@ -456,6 +498,8 @@ Allows you to **visualize**, **understand** & **manage** your AWS costs & usages
 - Default reports - Cost driver & Usage trends
 - Use forcasting to get ideas on future workload & costs
 - Visualize - daily or monthly level
+- Can view _Past 13 months_
+- Can predict _Future 3 months_
 
 ## AWS Cost and Usage Report
 
@@ -464,6 +508,15 @@ Generate a detail spreadsheet to help you analyse & understand your AWS costs
 - Places reports on S3 bucket
 - Uses Athena to generate the report
 - Use QuickSight to generate graphs
+
+## AWS Simple Monthly Calculator
+
+Helps Customers & Prospects estimate their monthly AWS bill more efficiently
+
+- You can add services in different regions
+- Includes support for most AWS services
+- Include additional costs such as - **Data ingress / egress charges, storage charges, retrieval fees**
+- Support is also provided
 
 ## AWS Budgets
 
@@ -483,12 +536,14 @@ AWS Budgets allow you to setup alerts if you are nearing / exceeding your define
 
 TCO Calculator stands for - Total Cost of Ownership Calculator
 
-It estimates HOW MUCH YOU WOULD SAVE when moving from on-premise to AWS cloud.
+It estimates **"HOW MUCH YOU WOULD SAVE"** when moving from _on-premise to AWS cloud_.
 
 - Generates detailed set of reports for presentation
 - Built on underlying calculation which generate fair assessment of value
 - Helps by reducing the need to invest on large capital expenditures
 - The tool is for approximation purposes only!
+- Helps reduce _"Total Cost of Ownership"_ by avoiding large CAPEX on Infrstructure & hardware
+- Elements can be added / removed which helps in better estimation
 
 ## AWS Landing Zones
 
@@ -609,7 +664,7 @@ _When using Amazon IAM, what authentication methods are available to use (choose
 - Server Certificates :white_check_mark:
 - AES 256 :x:
 
-### Explanation
+#### Explanation
 
 - Supported authentication methods include
   - Console Password
@@ -618,6 +673,50 @@ _When using Amazon IAM, what authentication methods are available to use (choose
 - Client certificates are not a valid authentication method
 - :exclamation: Amazon KMS is used for managing encrypted keys and not for authentication
 - AES 256, is an encryption algorithm, not an authentication method.
+
+
+
+### Question 08
+
+_Which of the following types are valid Reserved Instances ? (Choose two)_
+
+- Convertible RI :white_check_mark:
+- Discounted RI :x:
+- Scheduled RI :white_check_mark:
+- Long-term RI :x:
+- Special RI :x:
+
+#### Explanation
+
+Reserved Instances are of 3 types
+
+- Standard RI - most significant discount (upto 75% off on-demand instances)
+- Convertible RI - 54% discount and the abililty to change the attributes
+- Scheduled RI - Available to launch within the window timeframe you reserve
+
+
+
+### Question 09
+
+_How do you reduce latency between End-users & application / content ?_
+
+- Deploy Applications in multiple AZs ? :x:
+- Deploy Applications in regions closest to end users :white_check_mark:
+- Use Amazon CloudFront to cache content closest to end users :white_check_mark:
+- Use S3 acceleration to improve application performance :x:
+- User Larger EC2 instance types :x:
+
+#### Explanation
+
+- Deploying to multiple AZs may create resiliency but will not improve latency as AZs are close to each other
+- S3 Transfer Acceleration is used to improve upload speeds to S3 server & does not affect application performance
+
+
+
+
+
+
+
 
 
 

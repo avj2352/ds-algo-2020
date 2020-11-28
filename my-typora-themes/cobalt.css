@@ -2,6 +2,7 @@
     --bg-color: #141d28;
     --side-bar-bg-color: #090b10;
     --control-text-color: #59f9ff;
+    --control-text-color-italic: #56fac9;
     --control-link-color: #ff50d3;
     --primary-color: #efb752;
     --primary-btn-border-color: #f0b752;
@@ -82,6 +83,14 @@ body {
 #write>ul:first-child,
 #write>ol:first-child {
     margin-top: 30px;
+}
+
+em {
+    color: var(--control-text-color-italic);
+}
+
+strong {
+    color: var(--primary-color);
 }
 
 a {

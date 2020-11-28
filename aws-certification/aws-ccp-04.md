@@ -11,6 +11,16 @@ When used in Cloud computing, the Operating system that is directly installed on
 
 
 
+### AWS OpsWorks
+
+AWS OpsWorks supports continuous configuration through lifecycle events that automatically update your instances' configuration to adapt to environment changes
+
+- Provides managed instances of Chef & Puppet
+- Alows you to use code to automate the configuration of your servers
+- Chef & Puppet allow you to define how the servers are configured, deployed & managed across your EC2 instances.
+
+
+
 ### ELB & Auto Scaling
 
 AWS provides ELB & Auto-scaling to evenly distribute incoming connections and make sure the right amount of instances are available to service the load. It does this using Elastic Load Balancer & Auto-scaling
@@ -49,8 +59,6 @@ AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps
 
 - AWS WAF can be used to control how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you configure.
 
-
-
 ### EFS vs S3 vs EBS
 
 | EFS                                                          | S3                                                           | EBS                                                          |
@@ -61,6 +69,8 @@ AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps
 | Ideal for Hierarchical data ie., Folders, Files. Ideal to store documents, Audit, E-papers, DB Backups, shared corporate directories, content management | Used mainly for Web applications files / objects / images storage. Can also store files, images, video, audio | Ideal for DB, Disk Images, VMS.                              |
 | It provides a simple interface allowing you to create and configure file systems quickly and manages the file storage infrastructure for you, removing the complexity of deploying, patching, and maintaining the underpinnings of a file system. | Ideally used to host assets such as documents, images, and videos which can be referenced by web applications. | Most EC2 instance types use EBS for persistent storage.      |
 
+
+
 ### EBS Volume Types
 
 - General Purpose SSD (gp2)
@@ -70,6 +80,14 @@ AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps
 - Magnetic (standard, a previous generation type)
 
 ![EC2 types](./images/image013.jpg)
+
+
+
+### EKS
+
+[More about EKS](https://aws.amazon.com/eks/features/)
+
+Amazon Elastic Container Service for Kubernetes (EKS) is a managed service for you to run Kubernetes on AWS, without needing to install, operate or maintain your own Kubernetes control panel.
 
 ### IAM Policies vs Bucket Policies
 
@@ -230,3 +248,162 @@ With Amazon Snowball, you can transfer 100s of Terabytes or Petabytes of data be
 - Snowball Edge - 100TB comes with onboard storage & compute capabilities
 - Snowball supports specific Amazon EC2 instance types and AWS Lambda functions, so you can develop and test in the AWS Cloud, then deploy applications on devices in remote locations to collect, pre-process, and ship the data to AWS. 
 - Common use cases include data migration, data transport, image collation, IoT sensor stream capture, and machine learning.
+
+
+
+### AWS Batch
+
+>  [More about AWS Batch](https://aws.amazon.com/batch/features/)
+
+With AWS Batch, you can simply - package the code for you batch jobs, specify their dependencies & submit your batch jobs to AWS management console, CLI or SDK.
+
+- Batch jobs allow you to execution parameters & job dependencies & facilitate integrations
+- Eg: Pegasus, WMS, Luigi, AWS Step functions
+- AWS Batch jobs can efficiently scale your EC2 & Spot instances based on the requirements of your jobs.
+
+
+
+### AWS Storage Gateway
+
+AWS Storage gateway is a Hybrid cloud storage which makes it easier for you to connect your On-Premise environment with AWS cloud.
+
+- AWS Storage Gateway seamlessly connects your local production or backup applications with NFS, SMB, iSCSI, or iSCSI-VTL
+
+
+
+### CloudWatch
+
+>  Cloud watch is for performance monitoring & Log retention
+
+Cloudwatch can monitor the following resources
+
+- Amazon DynamoDB tables
+- Amazon RDS DB instances
+- EC2 instances
+- Custom metrics developed by your application & servers
+- Custom logs by your application
+
+
+
+### :exclamation: CloudWatch Retention Information
+
+Cloudwatch retains metric data as follows:
+
+- Data points with a period < 60 seconds are available for a period of 3 hours. High res custom metrics
+- Data points with a period of 60 seconds (1 min) are available for a period of 15 days
+- Data points with a period of 300 seconds (15 mins) are available for period of 63 days
+- Data points with a period of 36000 seconds (1 hour) are available for period of 455 days (15 months)
+
+
+
+### :exclamation:Cloudwatch Monitoring
+
+- **Basic Monitoring** - 5 mins (free for EC2, ELBs, EBS & RDS DBs)
+- **Detailed Monitoring** - 1 min (Chargeable)
+
+
+
+### CloudTrail
+
+Is used for auditing purposes and logs activities between your AWS resources
+
+- delivers log files to Amazon S3 Bucket
+- saves history of AWS API Calls
+- Visibility of user acitivity by logging actions taken on your AWS account
+- Not enabled by default
+
+
+
+### AWS SNS - Simple Notification Service
+
+AWS webservice which makes it easier to setup, operate & send notifications from the cloud. Can send manual or automated messages to Email, Mobile, SQS & HTTP endpoints.
+
+- Message Data types are JSON data types. Messages are string based formatted only
+
+### AWS SWF - Simple Workflow Service
+
+Amazon SWF helps developers build, run & scale background jobs that have parallel or sequential steps.
+
+### AWS SQS - Simple Queue Service
+
+Fully managed Message Queueing Service that enables you to decouple & scale Microservices, Distributed systems & Serverless Applications.
+
+### AWS SES - Simple Email Service
+
+Cloud-based email service which helps digital marketers & application developers send marketing notifications & transactional messages
+
+- Message can be HTML based rich test formatted.
+
+
+
+### AWS QuickStarts
+
+Quick starts are built by AWS arhitects & partners to help you deploy popular solutions on AWS, based on AWS best practices for security & high availabililty
+
+- Implement key technologies automatically
+- Single click, less than an hour
+- Leverages Cloud Formation (remember Infrastructure as Code)
+
+
+
+### AWS KMS - Key Management Service
+
+> Key Encryption on AWS Service level
+
+AWS KMS gives you centralized control over encryption of keys used to protect your data
+
+- Import, Rotate, Disable, Enable, Apply usage policies & Audit
+
+- Integrated with other AWS Services
+
+- Also integrated with CloudTrail
+
+- 1 click encryption using AWS console or by using AWS SDK
+
+  
+
+### AWS HSM - Hardware Security Model
+
+> User defined Key encryptionn on Application level
+
+Cloud based Hardware security model that lets you define your own keys and use them in your application
+
+- Manage your own keys using FIPS 140-2 Level 3
+- Use industry standard APIs - PKCS#11, Java cryptography extension (JCE), Microsoft CyptoNG libraries (CNG)
+
+- Uses an agent installed on EC2 instances
+- EC2 instances must be tagged
+
+
+
+### AWS Elasitcache - ES
+
+Amazon ES offers **Redis** & **Memcached**.
+
+- Seamlessly deploy,  run & operate open-source in-memory compatible data-sources
+- Amazon elasticache can significantly improve latency & throughput of read-heavy applications such as Social Networking, Games, Media Sharing & Q&A Portals
+
+
+
+### AWS Neptune
+
+With AWS Neptune, you can create sophisticated, interactive graph applications which can query billions of data in seconds.
+
+- SQL Queries for Highly-connected datasets is difficult to tune for performance
+- Amazon Neptune allows you to use Graph query languages - TinkerPop Gremlin & W3C's SPARQL
+
+
+
+### AWS SMS - Server Migration Service
+
+- AWS SMS is an agentless service which makes it easier and faster for you to migrate _thousands_ of On-Premise workloads to AWS cloud.
+
+
+
+### AWS CodeStar
+
+> [More about AWS CodeStar](https://aws.amazon.com/codestar/features/)
+
+- AWS codestar allows you to quickly develop, build & deploy applications to AWS Cloud
+- Has many project templates which you can use to configure AWS Lambda, Elastic Beanstalk and Amazon EC2 instances
+- Support Java, Javascript, PHP, Ruby & Python
