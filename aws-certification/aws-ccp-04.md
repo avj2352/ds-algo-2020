@@ -79,7 +79,9 @@ Auto scaling provides -
 - Fault Tolerance - Auto scaling detects when an instance is unhealthy & replaces it
 - Scalability & Elasticity
 
+- :exclamation: When you create a load balancer, you must choose whether to make it an internal load balancer or an internet-facing load balancer. In a multi-tier architecture, as described above, you would deploy an internal load balancer to distribute traffic from the webservers to the application servers. The nodes of an internal load balancer have only private IP addresses. The DNS name of an internal load balancer is publicly resolvable to the private IP addresses of the nodes. Therefore, internal load balancers can only route requests from clients with access to the VPC for the load balancer.
 
+- The answer “Internet-facing” is incorrect as this configuration is used to support traffic the web-servers from users on the Internet
 
 ### Security Groups
 
@@ -283,6 +285,14 @@ Amazon S3 Glacier and S3 Glacier Deep Archive are a secure, durable, and extreme
 
 
 
+### Amazon S3 Intelligent Tiering
+
+The S3 Intelligent-Tiering storage class is designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead. It works by storing objects in two access tiers: one tier that is optimized for frequent access and another lower-cost tier that is optimized for infrequent access. For a small monthly monitoring and automation fee per object, Amazon S3 monitors access patterns of the objects in S3 Intelligent-Tiering and moves the ones that have not been accessed for 30 consecutive days to the infrequent access tier. If an object in the infrequent access tier is accessed, it is automatically moved back to the frequent access tier.
+
+>  The answer “Amazon Glacier” is incorrect as while it is the cheapest available on the platform, it does not offer the ability to make data instantly available when required. Retrieving data from Glacier can take a bit of time depending on the retrieval option.
+
+
+
 ### Amazon Snowball
 
 > [About Amazon Snowball](https://aws.amazon.com/snowball/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
@@ -435,6 +445,8 @@ Amazon ES offers **Redis** & **Memcached**.
 
 ### AWS Neptune
 
+> REMEMBER: Sophisticated, interactive Graph application + Query billions of data in seconds
+
 With AWS Neptune, you can create sophisticated, interactive graph applications which can query billions of data in seconds.
 
 - SQL Queries for Highly-connected datasets is difficult to tune for performance
@@ -442,9 +454,35 @@ With AWS Neptune, you can create sophisticated, interactive graph applications w
 
 
 
+### AWS Redshift
+
+> REMEMBER, Fully managed data warehouse solution + BI Tools + Analyze data
+
+Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools. 
+
+- It allows you to run complex analytic queries against petabytes of structured data using sophisticated query optimization, columnar storage on high-performance storage, and massively parallel query execution.
+
+
+
 ### AWS SMS - Server Migration Service
 
-- AWS SMS is an agentless service which makes it easier and faster for you to migrate _thousands_ of On-Premise workloads to AWS cloud.
+AWS SMS is an agentless service which makes it easier and faster for you to migrate _thousands_ of On-Premise workloads to AWS cloud.
+
+
+
+### AWS - Database Migration Service 
+
+The AWS Database Migration Service can migrate your data to and from the most widely used commercial and open-source databases. The service supports homogeneous migrations such as Oracle to Oracle, as well as heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora or Microsoft SQL Server to MySQL.
+
+> Perform heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora
+
+
+
+### AWS Parameter Store
+
+> Remember - Heroku Environment Variables set like UI
+
+AWS Parameter Store helps you to store your application environment variables in a secure encrypted manner
 
 
 

@@ -2,7 +2,7 @@
 
 >  [Paper 01 Link on Udemy](https://www.udemy.com/course/aws-certified-cloud-practitioner-clf-c01/learn/quiz/4972024/result/412366430#overview)
 
-### Question 6: **Incorrect**
+### 1. Question 6: **Incorrect**
 
 You wish to configure a bucket that will enforce a policy that enables anonymous to access its content if they connect to the data from the Corporate and branch offices as part of your security strategy. Which S3 configuration feature will enable you to define the IP Ranges from where you will allow access to the data?
 
@@ -25,7 +25,7 @@ Ref: https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-
 
 
 
-### Question 7: **Incorrect**
+### 2. Question 7: **Incorrect**
 
 Your organization hosts multiple AWS Accounts with multiple VPCs. You would like to connect these VPCs together and centrally manage connectivity policies. Which AWS service enables you to connect multiple VPCs configured as a hub that controls how traffic is routed among all the connected networks which act like spokes?
 
@@ -48,7 +48,7 @@ Ref: https://aws.amazon.com/transit-gateway/
 
 
 
-### Question 11: **Incorrect**
+### 3. Question 11: **Incorrect**
 
 Which Amazon S3 Storage Class enables you to optimize costs by automatically moving data to the most cost-effective access tier, while ensuring that frequently access data is made available immediately?
 
@@ -69,7 +69,7 @@ The answer “Amazon Glacier” is incorrect as while it is the cheapest availab
 
 
 
-### Question 13: **Incorrect**
+### 4. Question 13: **Incorrect**
 
 Which AWS service enables you to perform heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora
 
@@ -92,7 +92,7 @@ Ref: https://youtu.be/ouia1Sc5QGo
 
 
 
-### Question 15: **Incorrect**
+### 5. Question 15: **Incorrect**
 
 You are building a multi-tier architecture with web servers placed in the public subnet and application servers placed in the private subnet of your VPC. You need to deploy Elastic Load Balancers to distribute traffic to both the web-server farm and the application server farm. Which type of load balancer would you choose to distribute traffic to your application servers?
 
@@ -113,7 +113,7 @@ Ref: https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elast
 
 
 
-### Question 21: **Incorrect**
+### 6. Question 21: **Incorrect**
 
 A company plans to migrate its on-premises MySQL database to Amazon RDS. Which AWS service should they use for this task?
 
@@ -136,7 +136,7 @@ Ref: https://youtu.be/ouia1Sc5QGo
 
 
 
-### Question 26: **Incorrect**
+### 7. Question 26: **Incorrect**
 
 You have a fleet of on-premise servers that require access to a centrally managed cloud storage service. The application running on your servers need to be able to store and retrieve files as durable objects on Amazon S3 over standard NFS based access with local caching. Which AWS service can help you deliver a solution to meet the above required?
 
@@ -159,7 +159,7 @@ Ref: https://youtu.be/tP5edaxBEEI
 
 
 
-### Question 27: **Incorrect**
+### 8. Question 27: **Incorrect**
 
 You wish to configure an Amazon S3 Event, such that your legal team gets a notification if someone tries to delete an object from a sensitive S3 Bucket? Which AWS Service is used by Amazon S3 to send out notifications to your legal team?
 
@@ -182,7 +182,7 @@ Ref: https://youtu.be/x1_Gj4FIeug
 
 
 
-### Question 28: **Incorrect**
+### 9. Question 28: **Incorrect**
 
 Which AWS Service helps you to review the state of your workloads and compares them to the latest AWS architectural best practices?
 
@@ -205,7 +205,7 @@ Ref: https://aws.amazon.com/well-architected-tool/
 
 
 
-### Question 36: **Incorrect**
+### 10. Question 36: **Incorrect**
 
 Which AWS service enables you to experience a truly hybrid solution by extending AWS Infrastructure such as EC2 and EBS services such that they can be hosted in your own on-premise datacentre?
 
@@ -228,7 +228,7 @@ Ref: https://youtu.be/c-SZB0AabAc
 
 
 
-### Question 40: **Incorrect**
+### 11. Question 40: **Incorrect**
 
 Which AWS service enables you to monitor and have consistent visibility and network traffic controls for every microservice in an application, such that you can quickly pinpoint the exact location of errors and automatically re-route network traffic when there are failures or when code changes need to be deployed?
 
@@ -249,7 +249,7 @@ Amazon Macie is not the correct answer. It is a security service that uses machi
 
 
 
-### Question 41: **Incorrect**
+### 12. Question 41: **Incorrect**
 
 Which mode of Amazon ECS allows you to have control and manage your cluster of servers and schedule placement of containers on the servers?
 
@@ -272,7 +272,7 @@ Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.ht
 
 
 
-### Question 43: **Incorrect**
+### 13. Question 43: **Incorrect**
 
 Your company uses Amazon RDS for certain databases it hosts on AWS. Amazon also offers you the ability to use the same RDS technology on-premise. Which AWS service enables you to deploy Amazon RDS services on-premise, bringing the same benefits of easy to set up, operate, and scale databases to your on-premises deployments?
 
@@ -293,7 +293,7 @@ Ref: https://youtu.be/JHVSesLmWkY
 
 
 
-### Question 46: **Incorrect**
+### 14. Question 46: **Incorrect**
 
 Which service of the AWS Global Infrastructure enables you to distribute your content (videos, images, documents) such that they are cached locally for low latency access when your users try to download them?
 
@@ -316,7 +316,7 @@ Ref: https://youtu.be/AT-nHW3_SVI
 
 
 
-### Question 47: **Incorrect**
+### 15. Question 47: **Incorrect**
 
 Which AWS Service provides you with static IP addresses that serve as a fixed entry point to your applications, thereby ensuring that you don’t need to make any client-facing changes or update DNS records as you modify or replace endpoints such as Application Load Balancers to connect to your application?
 
@@ -339,7 +339,7 @@ Reg: https://youtu.be/GAxrPQ3ycsQ
 
 
 
-### Question 49: **Incorrect**
+### 16. Question 49: **Incorrect**
 
 Which AWS service can be used to run a piece of code which can create thumbnails of images uploaded to one Amazon S3 bucket and copy them copied to another S3 Bucket?
 
@@ -362,7 +362,7 @@ Ref: https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html
 
 
 
-### Question 52: **Incorrect**
+### 17. Question 52: **Incorrect**
 
 Which AWS Service can be used to analyze your data held in Amazon S3 using standard SQL queries, without having to set up and manage any servers or data warehouses?
 
@@ -385,35 +385,21 @@ Ref: https://aws.amazon.com/athena/
 
 
 
-### Question 54: **Incorrect**
+### 18. Question 54: **Incorrect**
 
 Which of the following statements is a valid reason for choosing a specific AWS Region to deploy your applications in? (Choose 2 answers)
 
-- 
+- Selecting a specific AWS region ensures that your IT Administrators can visit your local AWS datacentre to install physical servers without having to travel to another country
 
-  Selecting a specific AWS region ensures that your IT Administrators can visit your local AWS datacentre to install physical servers without having to travel to another country
+- Ensure that IAM users created are specific to a given region
 
-- 
+- Selecting a specific AWS region ensures that you can comply with data sovereignty laws and compliance
 
-  Ensure that IAM users created are specific to a given region
+  :white_check_mark:
 
-  (Incorrect)
+- Selecting a specific AWS region enables you to ensure that your application is closer to your end-users and offers low latency connectivity :white_check_mark:
 
-- 
-
-  Selecting a specific AWS region ensures that you can comply with data sovereignty laws and compliance
-
-  (Correct)
-
-- 
-
-  Selecting a specific AWS region enables you to ensure that your application is closer to your end-users and offers low latency connectivity
-
-  (Correct)
-
-- 
-
-  Launching EC2 Instances using your own AMIs
+- Launching EC2 Instances using your own AMIs
 
 #### Explanation
 
@@ -429,7 +415,7 @@ Ref: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availabil
 
 
 
-### Question 55: **Incorrect**
+### 19. Question 55: **Incorrect**
 
 Which of the following AWS Services is a better option to securely grant necessary permissions to a web application running on an EC2 Instance, that needs access to digital assets hosted on an S3 Bucket?
 
@@ -450,7 +436,7 @@ The answer “Security Group” is incorrect because Security Groups are firewal
 
 
 
-### Question 56: **Incorrect**
+### 20. Question 56: **Incorrect**
 
 Which feature of the AWS EC2 Services helps to prevent the accidental termination of an EC2 Instance by preventing the user from issuing a termination command either from the console or CLI?
 
@@ -469,7 +455,7 @@ Ref: https://youtu.be/hhWJxqzIB_k
 
 
 
-### Question 58: **Incorrect**
+### 21. Question 58: **Incorrect**
 
 Which AWS service enables you to perform search, analysis, and visualize data in real-time with features such as full-text search?
 
@@ -492,7 +478,7 @@ Ref: https://youtu.be/4Zw1IOxW-oA
 
 
 
-### Question 59: **Incorrect**
+### 22. Question 59: **Incorrect**
 
 Which AWS service helps you identify potential unused resources such as Elastic IP Addresses that are not attached to a running instance, and thus highlight opportunities to save on costs?
 
@@ -515,7 +501,7 @@ Ref: https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
 
 
 
-### Question 60: **Incorrect**
+### 23. Question 60: **Incorrect**
 
 > Remember: IAM policies are written in JSON format only
 >
@@ -537,3 +523,419 @@ The answer “YAML” is incorrect. YAML is a language used to create CloudForma
 The answers “XML” and “JAVA” are incorrect.
 
 Ref: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json
+
+## Second Attempt
+
+
+
+### 24. Question 17: **Incorrect**
+
+Your administrators need to access your AWS environment using the command-line interface to perform certain specific functions. Which login method do you need to provide them to grant them access via the CLI?
+
+- SSL Certificate
+- Access Keys :white_check_mark:
+- Snowball
+- IAM Username and Password
+
+#### Explanation
+
+In other to grant access via the Command Line Interface (CLI) users require Access Keys IDs and Secret Access Keys.
+
+IAM Username and Passwords can only grant you access with the AWS Management Console and so this answer is incorrect.
+
+An SSL Certificate is generally used to encrypt traffic to webservers and so this answer is incorrect.
+
+Amazon Snowball is a service that enables you to migrate data from your on-premise environment to Amazon S3 by using physical disk enclosure units. These units are shipped to your datacentre where you copy the data to and then send it back to Amazon to have the data imported to your S3 buckets.
+
+
+
+### 25. Question 22: **Incorrect**
+
+Which AWS database solution enables you to build a complete data warehousing solution, capable of handling complex analytic queries against petabytes of structured data using standard SQL and industry recognized Business Intelligence (BI) tools?
+
+- AWS Redshift :white_check_mark:
+- AWS DynamoDB
+- AWS Pluto
+- AWS Neptune :scream:
+
+#### Explanation
+
+Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data using sophisticated query optimization, columnar storage on high-performance storage, and massively parallel query execution.
+
+Amazon DynamoDB is an incorrect answer as this is Amazon’s NoSQL solution designed to support modern web and mobile application solutions
+
+Amazon Neptune is an incorrect answer because rather than a Datawarehouse solution, it is a fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets.
+
+Amazon Pluto is an incorrect answer as there is no such service.
+
+Ref: https://aws.amazon.com/redshift/features/
+
+
+
+### 26. Question 26: **Incorrect**
+
+Which component of the AWS System Manager service can be used to automate common administrative tasks like remotely executing shell scripts or PowerShell commands, installing software updates?
+
+- Maintenance Window
+- Run Command :white_check_mark:
+- Patch Manager
+- Parameter Store :x:
+
+#### Explanation
+
+The Run Command provides a simple way of automating common administrative tasks like remotely executing shell scripts or PowerShell commands, installing software updates, or making changes to the configuration of OS, software, EC2, and instances and servers in your on-premises data center.
+
+The answer Maintenance Window is incorrect. This lets you define a recurring window of time to run administrative and maintenance tasks across your instances.
+
+The answer, Patch Manager is incorrect. This component helps you select and deploy the operating system and software patches automatically across large groups of instances.
+
+The answer Parameter Store is incorrect. This service provides an encrypted location to store important administrative information such as passwords and database strings and integrates with KMS.
+
+Ref: https://youtu.be/MK4ZoCs-muo
+
+
+
+### 27. Question 48: **Incorrect**
+
+Which IAM service enables you to effectively manage users by creating a collection of them based on their job function and assigning them permissions according to their roles to the entire collective?
+
+- Security Groups
+- Group Policy Objects (GPOs)
+- IAM Policies
+- IAM Groups :white_check_mark:
+
+#### Explanation
+
+An IAM group is a collection of IAM users. Groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. For example, you could have a group called *Admins* and give that group the types of permissions that administrators typically need. Any user in that group automatically has the permissions that are assigned to the group. If a new user joins your organization and needs administrator privileges, you can assign the appropriate permissions by adding the user to that group. Similarly, if a person changes jobs in your organization, instead of editing that user's permission, you can remove him or her from the old groups and add him or her to the appropriate new groups.
+
+The answer, “IAM Policies” is incorrect as these are the permissions that you can apply to users or groups. IAM Policies do not let you create a collection of users.
+
+The answer, “Security Groups” is incorrect as it relates to EC2 Instance and the ability to open inbound and outbound traffic on specific ports to those instances. They have nothing to do with IAM users.
+
+The answer, “Group Policy Objects (GPOs)” is incorrect as there is no such term in AWS. This is a Microsoft term used to assign permissions to Active Directory users and groups.
+
+
+
+### 28. Question 51: **Incorrect**
+
+You have launched a VPC in your AWS Account. You have been asked if it is possible to establish connectivity from your on-premise network to the VPC enabling your Developers with seamless access to production workloads deployed in the VPC from the on-premise network. Which connectivity strategy will enable you to establish this connection over the standard public Internet while keeping costs to a minimum?
+
+- Setup a Direct Connect Connection between on-premise network and VPC :x:
+- Setup a Hardware VPC Connection between your on-premise network and the VPC :white_check_mark:
+- This cannot be done
+- Setup a Snowball Service
+
+#### Explanation
+
+You can create a hardware virtual private network (VPN) connection between your corporate data center and your VPC and leverage the AWS Cloud as an extension of your corporate data center.
+
+You can alternatively use Direct Connect to configure connectivity between the on-premise network and the cloud. However, this is the most expensive and uses private network connectivity.
+
+Ref: https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/network-to-amazon-vpc-connectivity-options.html
+
+
+
+# Udemy Paper 02 Notes
+
+
+
+### 1. Question 4: **Incorrect**
+
+Which IAM feature enables you to grant secure access to other AWS accounts?
+
+- IAM Groups :x:
+- IAM Users
+- IAM Roles :white_check_mark:
+- ExternalID
+
+#### Explanation
+
+IAM Roles enable you to grant granular permissions to trusted entities. This can include other AWS accounts for cross-account access. You can grant your IAM users permission to switch to roles within your AWS account or to roles defined in other AWS accounts that you own.
+
+Ref: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html
+
+
+
+### 2. Question 9: **Incorrect**
+
+One of the five design principals of the Performance Efficiency Pillar suggests using a serverless architecture. Which of the following use cases lends itself well to using serverless architecture? (Choose 2 answers)
+
+- Hosting a static website on an S3 Bucket :white_check_mark:
+- Using a Bastion Host to schedule start and stop commands for your backend servers
+- Using Lambda Functions to start and stop test servers :white_check_mark:
+- Hosting a static website on an EC2 Instance
+
+#### Explanation
+
+Amazon S3 Buckets can be used to host static websites and are highly scalable without the need to manage and procure servers. Lambda Functions enable you to run code in response to triggers and CloudWatch Event Rules and are completely servers from the customers’ point of view.
+
+EC2 Instances are virtual servers in the cloud and require management overhead as well as manual scaling to cope with load and traffic. EC2 Instances and Bastion Hosts are incorrect answers.
+
+Ref: https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf
+
+
+
+### 3. Question 11: **Incorrect**
+
+Which AWS service makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS
+
+- Amazon ECS :x:
+- Amazon EMR
+- Amazon EC2
+- Amazon EKS :white_check_mark:
+
+#### Explanation
+
+Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service. Amazon EKS runs the Kubernetes management infrastructure for you across multiple AWS availability zones to eliminate a single point of failure. Amazon EKS is a certified Kubernetes conformant so you can use existing tooling and plugins from partners and the Kubernetes community. Applications running on any standard Kubernetes environment are fully compatible and can be easily migrated to Amazon EKS
+
+The answer to Amazon ECS is incorrect. Amazon Elastic Container Service (Amazon ECS) is a highly scalable, high-performance container orchestration service that supports Docker containers and allows you to easily run and scale containerized applications on AWS. Amazon ECS eliminates the need for you to install and operate your own container orchestration software, manage and scale a cluster of virtual machines, or schedule containers on those virtual machines.
+
+The answer to Amazon EC2 is incorrect. Amazon EC2 offers you virtual servers that run on the AWS platform in your own VPC. You can host both Linux and Windows-based servers in the cloud.
+
+The answer to Amazon EMR is incorrect. Amazon EMR is the industry-leading cloud big data platform for processing vast amounts of data using open source tools such as Apache Spark, Apache Hive, Apache HBase, Apache Flink, Apache Hudi, and Presto. With EMR you can run Petabyte-scale analysis at less than half of the cost of traditional on-premises solutions and over 3x faster than standard Apache Spark.
+
+
+
+### 4. Question 14: **Incorrect**
+
+You are building an application for a Wealth Asset Management company which will be used to store portfolio data and transactions of stocks. Mutual funds and Forex purchased. To that end you require a backend database solution that will ensure a ledger-like functionality because they want to maintain an accurate history of their applications' data, for example, tracking the history of credits and debits for its customers. Which AWS Database Solution would you recommend for this business requirement?
+
+- Amazon Redshift
+- Amazon DynamoDB
+- Amazon QLDB :white_check_mark:
+- Amazon RDS :x:
+
+#### Explanation
+
+Amazon QLDB is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log ‎owned by a central trusted authority. Amazon QLDB tracks each application data change and maintains a complete and verifiable history of changes over time.
+
+The answer, ‘Amazon RDS’ is not suitable for this requirement as the data is can be manipulated in an RDS database
+
+The answer, ‘Amazon DynamoDB’ is not suitable for this requirement as it does not offer the key features of the immutability of data. DynamoDB is more suitable for mobile, web, gaming, ad tech, IoT, and other applications that need low-latency data access at any scale.
+
+The answer, ‘Amazon Redshift’ is not suitable for this requirement as it is more suited to a data warehousing solution. With Redshift, you can query petabytes of structured and semi-structured data across your data warehouse and your data lake using standard SQL. Redshift lets you easily save the results of your queries back to your S3 data lake using open formats like Apache Parquet to further analyze from other analytics services like Amazon EMR, Amazon Athena, and Amazon SageMaker.
+
+Ref: https://youtu.be/jcZ_rsLJrqk
+
+
+
+### 5. Question 15: **Incorrect**
+
+You are setting an AWS CloudFront distribution for a new video sharing web application. Your CFO would like to know the costs associated with using CloudFront. Which of the following is NOT required to estimate the cost of CloudFront?
+
+- Number of Requests
+- Traffic distribution :x:
+- Data Transfer In :white_check_mark:
+- Data Transfer Out
+
+#### Explanation
+
+When estimating the cost of setting up CloudFront, key factors that will determine the price include:
+
+\- Traffic Distribution which varies across geographical areas
+
+\- Number and type of requests (HTTP or HTTPS)
+
+\- The amount of data transferred out of your CloudFront Edge Locations 
+
+Ref: https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+
+
+
+### 6. Question 16: **Incorrect**
+
+Which of the following is true with regards to the benefits of purchasing a convertible EC2 Reserved Instance? (Choose 2 answers)
+
+- You can exchange All Upfront and Partial Upfront Convertible Reserved Instances for No Upfront Convertible Reserved Instances.
+- You can exchange one or more Convertible Reserved Instances at a time for both Convertible and Standard Reserved Instance
+- To benefit from better pricing, you can exchange a No Upfront Convertible Reserved Instance for an All Upfront or Partial Upfront Convertible Reserved Instance. :white_check_mark:
+- You can exchange one or more Convertible Reserved Instances for another Convertible Reserved Instance with a different configuration, including instance family, operating system, and tenancy :white_check_mark:
+- You can exchange a Convertible Reserved Instance for a Convertible Reserved Instance in a different Region. :x:
+
+#### Explanation
+
+Convertible Reserved Instances carry several advantages over Standard Reserved Instances. For example, you can exchange one or more Convertible Reserved Instances for another Convertible Reserved Instance with a different configuration, including instance family, operating system, and tenancy. You can also exchange a No Upfront Convertible Reserved Instance for an All Upfront or Partial Upfront Convertible Reserved Instance.
+
+For a list of permitted and non-permitted option ref to https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ri-convertible-exchange.html
+
+
+
+### 7. Question 22: **Incorrect**
+
+Which Amazon S3 service can you use to automatically migrate data from one storage class to another after a set number of days as a means of reducing your costs, especially where frequent instant access may not be required to that subset of data?
+
+- Versioning
+- Lifecycle Management :white_check_mark:
+- Storage Transition
+- S3 Migration :x:
+
+#### Explanation
+
+You can use Lifecycle Management to automatically move objects from one storage class to another for better management of costs. Two types of actions can be performed on your S3 Objects:
+
+· Transition Actions – Defines when to move an object from one class to another. For example, you know after 90 days some files will be rarely accessed and so you can move them to a cheaper storage class.
+
+· Expiration Actions – Define when an object is to be expired which deletes the object from S3. For example, you do not need to keep certain documents after 7 Years and so you can automatically delete these after the retention period to save on costs.
+
+Ref: https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html
+
+
+
+### 8. Question 26: **Incorrect**
+
+Which AWS S3 service can be used to help prevent accidental deletion of objects?
+
+- Shadow Copy Service
+- Prevent Delete Option :x:
+- Lifecycle Management
+- Versioning :white_check_mark:
+
+#### Explanation
+
+Versioning is a means of keeping multiple variants of an object in the same bucket. You can use versioning to preserve, retrieve, and restore every version of every object stored in your Amazon S3 bucket. With versioning, you can easily recover from both unintended user actions and application failures. When you enable versioning for a bucket, if Amazon S3 receives multiple write requests for the same object simultaneously, it stores all of the objects.
+
+Ref: https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
+
+
+
+### 9. Question 34: **Incorrect**
+
+Your company manages a fleet of Windows EC2 instances in a VPC (Public/Private Subnet Configuration) for a client. Your team is connecting to the VPC over the Internet to manage the fleet of Amazon EC2 instances running in both the public and private subnets. You have not yet gotten the approval to configure a site-to-site VPN tunnel from your offices to the client’s VPC. 
+
+You have added a bastion host with Microsoft Remote Desktop Protocol (RDP) access to the application instance in the private subnet, but the client wants to further limit administrative access to all of the instances in the VPC. 
+
+Which of the following bastion host deployment options will meet this requirement?
+
+- Deploy the Bastion Host in the Private Subnet and configure it with an Elastic IP Address and a Security Group to accept incoming RDP traffic from only your corporate IP Address :x:
+- Configure the Bastion Host to accept only incoming SSH traffic. Disable RDP access to the Bastion host
+- Set up a Direct Connect Link between your office and the client’s VPC
+- Configure the Bastion Host in the Public Subnet with an Elastic IP and a Security Group to accept incoming RDP traffic from only your corporate IP Address :white_check_mark:
+
+#### Explanation
+
+By limiting access to the Bastion host from your corporate IP Address, you further protect the instance from malicious attacks from anywhere else. You cannot place a Bastion Host in the Private subnet with a Public IP address as that configuration will not work. SSH traffic is applicable for Linux based instances only, and setting up a Direct Connect is a bit of overkill.
+
+
+
+### 10. Question 36: **Incorrect**
+
+Which AWS service enables you to configure multiple Windows-based EC2 Instances to share and access a common storage solution that is based on using the industry-standard SMB protocol and eliminate the administrative overhead of managing Windows file servers?
+
+- Amazon Elastic File System :x:
+- Amazon Elastic Block Store
+- Amazon DFS Volumes for Windows File Server
+- Amazon FSx for Windows File Server :white_check_mark:
+
+#### Explanation
+
+Amazon FSx for Windows File Server provides a fully managed native Microsoft Windows file system so you can easily move your Windows-based applications that require file storage to AWS. Built on Windows Server, Amazon FSx provides shared file storage with the compatibility and features that your Windows-based applications rely on, including full support for the SMB protocol, Windows NTFS, and Active Directory (AD) integration. Amazon FSx uses SSD storage to provide the fast performance your Windows applications and users expect, with high levels of throughput and IOPS, and consistent sub-millisecond latencies.
+
+The answer “Amazon Elastic File System” is incorrect as this file system accessed using the NFS protocol and designed for Linux based servers.
+
+The answer “Amazon Elastic Block Store” is incorrect as EBS Volumes cannot be used as a shared storage solution across multiple EC2 Instances
+
+The answer “Amazon DFS Volumes for Windows File Server” is incorrect as there is no such service.
+
+### 11. Question 39: **Incorrect**
+
+Which of the following determines the price of S3? (Choose 3 answers).
+
+- EBS Type
+- Data Transfer Out :white_check_mark:
+- Storage Class :white_check_mark:
+- Amount of Storage :white_check_mark:
+- EFS Volumes :x:
+
+#### Explanation
+
+There is no minimum fee. There are four cost components to consider when deciding on which S3 storage class best fits your data profile – storage pricing, request and data retrieval pricing, data transfer and transfer acceleration pricing, and data management features pricing.
+
+Ref: https://aws.amazon.com/s3/pricing/
+
+
+
+### 12. Question 41: **Incorrect**
+
+Which S3 storage class would you recommend for hosting data that is quickly accessible but infrequently accessed and can also be re-created if required hence offers even cheaper storage costs?
+
+- S3 Standard
+- S3 One Zone IA :white_check_mark:
+- S3 Infrequent Access (IA) :x:
+- Glacier
+
+#### Explanation
+
+S3 One Zone-IA is intended for use cases with infrequently accessed data that is re-creatable, such as storing secondary backup copies of on-premises data or for storage that is already replicated in another AWS Region for compliance or disaster recovery purposes. With S3 One Zone-IA, customers can now store infrequently accessed data within a single Availability Zone at 20% lower cost than S3 Standard-IA. 
+
+Ref: https://aws.amazon.com/s3/storage-classes/
+
+
+
+### 13. Question 56: **Incorrect**
+
+As part of implementing change management, which AWS service can be used to assess, audit, and evaluate change configurations of your AWS resources, enabling you to identify if a change was the cause of an incident?
+
+- AWS CloudWatch
+- AWS Config :white_check_mark:
+- AWS Outpost
+- AWS CloudTrail :x:
+
+#### Explanation
+
+With AWS Config, you can track the relationships among resources and review resource dependencies prior to making changes. Once a change occurs, you can quickly review the history of the resource's configuration and determine what the resource’s configuration looked like at any point in the past. Config provides you with information to assess how a change to a resource configuration would affect your other resources, which minimizes the impact of change-related incidents.
+
+The answer, ‘AWS CloudTrail’ is incorrect. You can use CloudTrail to view, search, download, archive, analyze, and respond to account activity across your AWS infrastructure. You can identify who or what took which action, what resources were acted upon, when the event occurred, and other details to help you analyze and respond to activity in your AWS account.
+
+The answer, ‘AWS CloudWatch’ is incorrect. CloudWatch collects monitoring and operational data in the form of logs, metrics, and events, providing you with a unified view of AWS resources, applications, and services that run on AWS and on-premises servers.
+
+The answer, ‘AWS Outpost’ is incorrect. AWS Outposts is a fully managed service that extends AWS infrastructure, AWS services, APIs, and tools to virtually any data center, co-location space, or on-premises facility for a truly consistent hybrid experience.
+
+Ref: https://youtu.be/MJDuAvNEv64
+
+Ref: https://aws.amazon.com/config/
+
+
+
+### 14. Question 64: **Incorrect**
+
+Which AWS Services enables developers to create, publish, maintain, monitor, and secure APIs for serverless applications that need to access data, business logic, or functionality from your backend services?
+
+- EC2 Instances
+- API Gateway :white_check_mark:
+- Route53
+- Lambda Functions :x:
+
+#### Explanation
+
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
+
+The answer, ‘Lambda Functions’, is incorrect. With Lambda, you can run code for virtually any type of application or backend service - all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.
+
+The answer, ‘EC2 Instances’, is incorrect. Amazon EC2 presents a true virtual computing environment, allowing you to use web service interfaces to launch instances with a variety of operating systems, load them with your custom application environment, manage your network’s access permissions, and run your image using as many or few systems as you desire.
+
+The answer, ‘Route53’, is incorrect. Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service. It is designed to give developers and businesses an extremely reliable and cost-effective way to route end users to Internet applications by translating names like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each other. Amazon Route 53 is fully compliant with IPv6 as well.
+
+Ref: https://aws.amazon.com/api-gateway/
+
+
+
+### 15. Question 65: **Incorrect**
+
+Which configuration feature of the AWS Auto Scaling service enables you to define a maximum number of EC2 Instances that can be launched in your fleet?
+
+- Auto Scaling Policy
+- Auto Scaling Launch Configuration :x:
+- Auto Scaling Group :white_check_mark:
+- Auto Scaling MaxFleet Size
+
+#### Explanation
+
+When configuring your Auto Scaling Group, you can define the minimum and maximum size of your group. You can also choose to keep the size of the group to an initial size which does not expand the group size but ensure that you always have the exact number of EC2 Instance running.
+
+The answer, ‘Auto Scaling Launch Configuration’ is incorrect because this is where you define the parameters for your EC2 Instance such as AMI, Instance Type, Key pairs, etc. You cannot define your group size here.
+
+The answer, ‘Auto Scaling MaxFleet Size’ is incorrect as there is no such option
+
+The answer, Auto Scaling Policy’, is incorrect as this is where you define the parameters that will trigger and launch or termination of an EC2 Instance. The size of the group, however, will still be maintained by the Auto Scaling Group configuration
+
+Ref: https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html
