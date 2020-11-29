@@ -11,6 +11,46 @@ When used in Cloud computing, the Operating system that is directly installed on
 
 
 
+### AWS App Mesh
+
+AWS App Mesh makes it easy to monitor and control microservices running on AWS. App Mesh standardizes how your microservices communicate, giving you end-to-end visibility, and helping to ensure high availability for your applications.
+
+
+
+### AWS EC2 Launch Type
+
+With the EC2 launch type, you can use Amazon ECS to manage a cluster of servers and schedule placement of containers on the servers.
+
+#### _How it is different from Fargate ?_
+
+With the Fargate launch type, all you have to do is package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application. EC2 launch type allows you to have server-level, more granular control over the infrastructure that runs your container applications. Thus, Fargate is an incorrect answer.
+
+
+
+### AWS RDS on VMWare
+
+Amazon Relational Database Service (RDS) on VMware lets you deploy managed databases in on-premises VMware environments using the Amazon RDS technology enjoyed by hundreds of thousands of AWS customers. RDS on VMware allows you to utilize the same simple interface for managing databases in on-premises VMware environments as you would use in AWS.
+
+
+
+### AWS Polly
+
+Amazon Polly is a service that turns text into lifelike speech. Polly lets you create applications that talk, enabling you to build entirely new categories of speech-enabled products. Polly is an Amazon artificial intelligence (AI) service that uses advanced deep learning technologies to synthesize speech that sounds like a human voice. Polly includes 47 lifelike voices spread across 24 languages, so you can select the ideal voice and build speech-enabled applications that work in many different countries.
+
+
+
+### AWS Outpost
+
+With AWS Outposts you can run Amazon EC2, Amazon EBS, container-based services such as Amazon EKS, database services such as Amazon RDS on AWS Outposts and analytics services such as Amazon EMR on-premises. This enables you to extend your Amazon Virtual Private Cloud on-premises and run some AWS services locally on Outposts hosted on your own Datacentre.
+
+| AWS Outpost                                                  | AWS Direct Connect                                           |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| With AWS Outposts you can run Amazon EC2, Amazon EBS, container-based services such as Amazon EKS, database services such as Amazon RDS on AWS Outposts and analytics services such as Amazon EMR on-premises. This enables you to extend your Amazon Virtual Private Cloud on-premises and run some AWS services locally on Outposts hosted on your own Datacentre. | ‘AWS Direct Connect’ is incorrect as although it enables you to connect your datacentre to your VPC in the cloud over AWS private links, you cannot use it to host EC2 or EBS services on-premise. |
+| You can use AWS Outpost to host AWS EC2 instances            | You cannot use AWS Direct Connect to host instances          |
+| On Instance Level                                            | On Subnet Level                                              |
+
+
+
 ### AWS OpsWorks
 
 AWS OpsWorks supports continuous configuration through lifecycle events that automatically update your instances' configuration to adapt to environment changes
@@ -80,6 +120,8 @@ AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps
 - Magnetic (standard, a previous generation type)
 
 ![EC2 types](./images/image013.jpg)
+
+![EBS Volumes Description](./images/image018.jpg)
 
 
 
@@ -164,6 +206,12 @@ AWS X-Ray helps developers analyze & debug production, distributed applications,
 ### AWS CloudTrail
 
 > Remember - Auditing across your AWS infrastructure
+
+
+
+### AWS Well Architected Tool
+
+The AWS Well-Architected Tool helps you review the state of your workloads and compares them to the latest AWS architectural best practices. The tool is based on the AWS Well-Architected Framework, developed to help cloud architects build secure, high-performing, resilient, and efficient application infrastructure.
 
 
 
