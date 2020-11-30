@@ -1,7 +1,5 @@
 ## AWS Definitions
 
-![Business](./images/image003.jpg)
-
 ### Hypervisor
 
 When used in Cloud computing, the Operating system that is directly installed on top of the hardware is called - **Hypervisor**. It is on top of this Hypervisor that additional, multiple Operating Systems are installed as Virtual Machines (VMs)
@@ -10,40 +8,6 @@ When used in Cloud computing, the Operating system that is directly installed on
 - Example of Type 01 Hypervisor include - VMWare ESXi & Microsoft Hyper-V
 - Example of Type 02 Hypervisor include - VMWare workstation & Oracle Virtual Box
 - Until now, Amazon was using the Xen Hypervisor which is now transitioned to KVM (Kernel based Virtual Machine)
-
-### AWS Auto Scaling
-
->  Auto Scaling adjusts the number of EC2 instances, not the size of EC2 instances. 
->
-> Ability to Scale EC2 IN or OUT!!
-
-Amazon EC2 Auto Scaling helps you maintain application availability and allows you to automatically add or remove EC2 instances according to conditions you define. You can use the fleet management features of EC2 Auto Scaling to maintain the health and availability of your fleet. You can also use the dynamic and predictive scaling features of EC2 Auto Scaling to add or remove EC2 instances.
-
-
-
-### AWS Managed Services
-
-> REMEMBER: HP Service Manager7 ? (ITIL & ITSM)
-
-AWS Managed Services manages the daily operations of your AWS infrastructure in alignment with ITIL processes. AWS Managed Services provides a baseline integration with IT Service Management (ITSM) tools such as the ServiceNow platform.
-
-AWS Managed Services currently supports the 20+ services most critical for Enterprises, and will continue to expand our list of integrated AWS services.
-
-AWS Managed Services is **designed to meet the needs of Enterprises** that require stringent SLAs, adherence to corporate compliance, and integration with their systems and ITIL®-based processes.
-
-
-
-### AWS Service Catalogue
-
-AWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS. These IT services can include everything from virtual machine images, servers, software, and databases to complete multi-tier application architectures.
-
-
-
-### AWS Trusted Advisor
-
-AWS Trusted Advisor checks security groups for rules that allow unrestricted access (0.0.0.0/0) to specific ports. Unrestricted access increases opportunities for malicious activity (hacking, denial-of-service attacks, loss of data). The ports with highest risk are flagged red, and those with less risk are flagged yellow. Ports flagged green are typically used by applications that require unrestricted access, such as HTTP and SMTP.
-
-The following image shows the results of the security group checks in an AWS account:
 
 
 
@@ -277,7 +241,7 @@ AWS Global Accelerator is a service that improves the availability and performan
 
 VPC Peering allows you to connect 2 peer-peer VPCs together
 
-- It does not enable you to centrally manage multiple VPCs connections centrally.
+- It does not enalbe you to centrally manage multiple VPCs connections centrally.
 
 
 
@@ -425,7 +389,6 @@ With AWS Batch, you can simply - package the code for you batch jobs, specify th
 AWS Storage gateway is a Hybrid cloud storage which makes it easier for you to connect your On-Premise environment with AWS cloud.
 
 - AWS Storage Gateway seamlessly connects your local production or backup applications with NFS, SMB, iSCSI, or iSCSI-VTL
-- Two types - File Gateway & Tape Gateway (Gateway Virtual Tape Library)
 
 
 
