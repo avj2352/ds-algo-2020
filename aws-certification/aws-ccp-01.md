@@ -18,6 +18,7 @@ The course is all about video links and notes regarding the **AWS CCP Certificat
 - [DigitalCloud Training](https://digitalcloud.training/aws-certified-cloud-practitioner-practice-tests/)
 - [Freecodecamp - AWS CCP Certification](https://www.youtube.com/watch?v=3hLmDS179YE&t=2s)
 - [AWS - Mock Question Video Youtube](https://www.youtube.com/watch?v=FXKE1SfityA&list=PL8lrfONBlapn3hLYC54Gorw1wt2yWC0l0&index=2)
+- [Miro - Well Architected Framework Mindmap](https://miro.com/app/board/o9J_ldQI6vc=/)
 
 # INSCALE - Topdanmark AWS Related Links
 

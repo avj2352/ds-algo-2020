@@ -9,6 +9,48 @@ When used in Cloud computing, the Operating system that is directly installed on
 - Example of Type 02 Hypervisor include - VMWare workstation & Oracle Virtual Box
 - Until now, Amazon was using the Xen Hypervisor which is now transitioned to KVM (Kernel based Virtual Machine)
 
+### Benefits of EC2
+
+- Elastic Web-scale computing
+- Inexpensive
+
+
+
+:exclamation: :exclamation:The following table classifies AWS services based on their scope (Global or Regional Level)
+
+| Global Scope / Service | Regional Scope / Service |
+| ---------------------- | ------------------------ |
+| AWS Route 53           | AWS EC2                  |
+| AWS CloudFront         | AWS Lambda               |
+| AWS IAM                | AWS S3                   |
+| AWS STS                |                          |
+
+> AWS S3 has global namespace, but buckets & objects are created on regional level
+>
+> By default all AWS STS requests go to the single endpoint: https://sts.amazonaws.com
+
+
+
+### :exclamation: :exclamation: Free Services
+
+Free services include:
+
+- Amazon VPC.
+- Elastic Beanstalk (but not the resources created).
+- CloudFormation (but not the resources created).
+- Identity Access Management (IAM).
+- Auto Scaling (but not the resources created).
+- OpsWorks.
+- Consolidated Billing.
+
+
+
+### AWS S3 One Zone IA
+
+> REMEMBER - In-frequest access with LOW RESILIENCY
+
+Amazon S3 storage class to use for storing copies of backup data. The storage provides **rapid access when needed but resiliency can be low.**
+
 
 
 ### AWS App Mesh
@@ -36,6 +78,14 @@ Amazon Relational Database Service (RDS) on VMware lets you deploy managed datab
 ### AWS Polly
 
 Amazon Polly is a service that turns text into lifelike speech. Polly lets you create applications that talk, enabling you to build entirely new categories of speech-enabled products. Polly is an Amazon artificial intelligence (AI) service that uses advanced deep learning technologies to synthesize speech that sounds like a human voice. Polly includes 47 lifelike voices spread across 24 languages, so you can select the ideal voice and build speech-enabled applications that work in many different countries.
+
+
+
+### AWS Lifecycle Management
+
+Amazon S3 service you can use to automatically migrate data from one storage class to another after a set number of days as a means of reducing your costs, especially where frequent instant access may not be required to that subset of data.
+
+
 
 
 
@@ -107,9 +157,10 @@ AWS WAF is an incorrect answer. AWS WAF is a web application firewall that helps
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Shared File System                                           | S3 is Object Storage                                         | Elastic Block Storage                                        |
 | :exclamation: Remember - One EFS can be used to support MANY EC2 instances. EFS is based on Network File System (Unix / Linux) | Provides a Flat hierarchy of storage. The topmost level containers are called Buckets. High scalability. Supports REST, SOAP & HTTP access. | EBS Volumes are durable, block-level storage volumes that can be attached to SINGLE EC2 instance only. |
-| EFS is a Regional Service. Stores data across mulitple AZs   |                                                              |                                                              |
+| EFS is a Regional Service. Stores data across mulitple AZs   |                                                              | Used to take snapshots backup                                |
 | Ideal for Hierarchical data ie., Folders, Files. Ideal to store documents, Audit, E-papers, DB Backups, shared corporate directories, content management | Used mainly for Web applications files / objects / images storage. Can also store files, images, video, audio | Ideal for DB, Disk Images, VMS.                              |
 | It provides a simple interface allowing you to create and configure file systems quickly and manages the file storage infrastructure for you, removing the complexity of deploying, patching, and maintaining the underpinnings of a file system. | Ideally used to host assets such as documents, images, and videos which can be referenced by web applications. | Most EC2 instance types use EBS for persistent storage.      |
+|                                                              |                                                              | a.k.a "Virtual Hard disk on cloud"                           |
 
 
 
@@ -176,6 +227,8 @@ AWS Transit Gateway is a service that enables customers to connect their Amazon 
 
 ### AWS Global Accelerator
 
+> High Availability, Low Latency
+
 AWS Global Accelerator is a service that improves the availability and performance of your applications with local or global users. 
 
 - It provides static IP addresses that act as a fixed entry point to your application endpoints in a single or multiple AWS Regions, such as your Application Load Balancers, Network Load Balancers, or Amazon EC2 instances.
@@ -215,7 +268,7 @@ AWS X-Ray helps developers analyze & debug production, distributed applications,
 
 The AWS Well-Architected Tool helps you review the state of your workloads and compares them to the latest AWS architectural best practices. The tool is based on the AWS Well-Architected Framework, developed to help cloud architects build secure, high-performing, resilient, and efficient application infrastructure.
 
-
+> [Link to Well Architected Framework - Miro](https://miro.com/app/board/o9J_ldQI6vc=/)
 
 ### AWS Trusted Advisor
 
@@ -271,11 +324,19 @@ Amazon Athena is an interactive query service that makes it easy to analyze data
 
 
 
+### Amazon Guard Duty
+
+AWS security service offer threat detection capabilities using machine learning and behavior models to help detect such malicious activity
+
+
+
 ### Amazon Glacier
 
 > [About Amazon S3 Glacier](https://aws.amazon.com/glacier/)
+>
+> Amazon S3 storage classes should be used for storing data for long time periods when immediate access is not required at the LOWEST cost
 
-Amazon S3 Glacier and S3 Glacier Deep Archive are a secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup. They are designed to deliver 99.999999999% durability, and provide comprehensive security and compliance capabilities that can help meet even the most stringent regulatory requirements. 
+**Amazon S3 Glacier** and **S3 Glacier Deep Archive** are a secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup. They are designed to deliver 99.999999999% durability, and provide comprehensive security and compliance capabilities that can help meet even the most stringent regulatory requirements. 
 
 - Customers can store data for as little as $1 per terabyte per month, a significant savings compared to on-premises solutions. 
 - To keep costs low yet suitable for varying retrieval needs, Amazon S3 Glacier provides three options for access to archives, from a few minutes to several hours, and S3 Glacier Deep Archive provides two access options ranging from 12 to 48 hours.
@@ -358,6 +419,12 @@ Cloudwatch retains metric data as follows:
 
 - **Basic Monitoring** - 5 mins (free for EC2, ELBs, EBS & RDS DBs)
 - **Detailed Monitoring** - 1 min (Chargeable)
+
+
+
+### CloudMap
+
+AWS service allows you to register any application resources, such as databases, queues, microservices, and other cloud resources, with custom names, that allows your applications to easily query the registry for the location of such resources
 
 
 
@@ -493,3 +560,16 @@ AWS Parameter Store helps you to store your application environment variables in
 - AWS codestar allows you to quickly develop, build & deploy applications to AWS Cloud
 - Has many project templates which you can use to configure AWS Lambda, Elastic Beanstalk and Amazon EC2 instances
 - Support Java, Javascript, PHP, Ruby & Python
+
+
+
+### Elastic Transcoder
+
+AWS service which can be used to convert video and audio files from their source format into versions that will playback on devices like smartphones, tablets and PC
+
+
+
+### Amazon EMR
+
+**Amazon EMR** is the industry-leading cloud big data platform for processing vast amounts of data using open source tools such as Apache Spark, Apache Hive, Apache HBase, Apache Flink, Apache Hudi, and Presto.
+

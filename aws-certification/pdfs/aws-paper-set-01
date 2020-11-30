@@ -1,6 +1,8 @@
 # Udemy Paper 01 Notes
 
 >  [Paper 01 Link on Udemy](https://www.udemy.com/course/aws-certified-cloud-practitioner-clf-c01/learn/quiz/4972024/result/412366430#overview)
+>
+>  50%
 
 ### 1. Question 6: **Incorrect**
 
@@ -105,7 +107,7 @@ You are building a multi-tier architecture with web servers placed in the public
 
 When you create a load balancer, you must choose whether to make it an internal load balancer or an internet-facing load balancer. In a multi-tier architecture, as described above, you would deploy an internal load balancer to distribute traffic from the webservers to the application servers. The nodes of an internal load balancer have only private IP addresses. The DNS name of an internal load balancer is publicly resolvable to the private IP addresses of the nodes. Therefore, internal load balancers can only route requests from clients with access to the VPC for the load balancer.
 
-The answer “Internet-facing” is incorrect as this configuration is used to support traffic the web-servers from users on the Internet
+The answer “Internet-facing” is incorrect as this configuration is used to support traffic of web-servers from users on the Internet
 
 The answers “Dynamic load balancers” and “Static load balancers” are incorrect as there is no such service.
 
@@ -524,9 +526,11 @@ The answers “XML” and “JAVA” are incorrect.
 
 Ref: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json
 
-## Second Attempt
 
 
+# Second Attempt
+
+> 92%
 
 ### 24. Question 17: **Incorrect**
 
@@ -637,7 +641,7 @@ Ref: https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options
 
 # Udemy Paper 02 Notes
 
-
+> 76%
 
 ### 1. Question 4: **Incorrect**
 
@@ -939,3 +943,230 @@ The answer, ‘Auto Scaling MaxFleet Size’ is incorrect as there is no such op
 The answer, Auto Scaling Policy’, is incorrect as this is where you define the parameters that will trigger and launch or termination of an EC2 Instance. The size of the group, however, will still be maintained by the Auto Scaling Group configuration
 
 Ref: https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html
+
+
+
+# Second Attempt
+
+> 92% 
+
+### Question 02
+
+You work for a web application development company and have been asked to design an infrastructure solution which can be repeatedly created using scripted templates to create individual sandbox environments for your developers to use. Some infrastructure components will include the setup and configuration of a VPC, EC2 Instances, S3 buckets etc. Which AWS service enables you to design an infrastructure template that can be deployed to create repeatable infrastructure for your developers to use as a sandbox environment?
+
+- AWS System Manager :scream:
+- AWS Config
+- AWS CloudFormation :white_check_mark:
+- AWS FSx for Lustre
+
+#### Explanation
+
+AWS CloudFormation gives developers and systems administrators an easy way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion. You can use AWS CloudFormation’s sample templates or create your own templates to describe the AWS resources, and any associated dependencies or runtime parameters, required to run your application. You don’t need to figure out the order for provisioning AWS services or the subtleties of making those dependencies work. CloudFormation takes care of this for you. After the AWS resources are deployed, you can modify and update them in a controlled and predictable way, in effect applying version control to your AWS infrastructure the same way you do with your software.
+
+The answer, ‘AWS System Manager’, is incorrect. With Systems Manager, you can group resources, like Amazon EC2 instances, Amazon S3 buckets, or Amazon RDS instances, by application, view operational data for monitoring and troubleshooting, and take action on your groups of resources.
+
+The answer, ‘AWS Config’, is incorrect. AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations
+
+The answer, ‘AWS FSx for Lustre’, is incorrect. Amazon FSx for Lustre makes it easy and cost-effective to launch and run a high-performance file system. Use it for workloads where speed matters, such as machine learning, high-performance computing (HPC), video processing, and financial modeling.
+
+Ref: https://youtu.be/Omppm_YUG2g
+
+
+
+### Question 11
+
+Which of the following six advantages of cloud computing enables you to achieve massive savings by avoiding hidden costs when compared to an on-premise infrastructure design?
+
+- Increase speed and agility
+- Stop spending money running and maintaining data centers :white_check_mark:
+- Trade capital expense for variable expense
+- Stop guessing capacity
+
+
+
+### Question 20: 
+
+Where can you set up Billing Alarms?
+
+- CloudWatch :white_check_mark:
+- Trusted Advisor
+- EC2 Dashboard
+- AWS Shield
+
+
+
+### Question 21
+
+Which of the following are examples of Amazon AWS Certifications and Attestations for Compliance? (Choose 3 answers)
+
+- SOC 3
+- VIP
+- PCI DSS Level1
+- XIP
+- ISO 27001
+
+
+
+### Question 24
+
+You are planning on developing a website in multiple languages such that you have one fleet of EC2 Instances which serves the English version of your site and another fleet that serves the Spanish version of your site. For each language version, you will be configuring URLs with different paths such that the English version of your site will contain /en/ in the path, and the Spanish version will contain /es/.
+
+Which type of Load Balancer would you use to route traffic to ensure users connect to the site in their desired language?
+
+- Network Load Balancer
+- Path-Based Load Balancer
+- Classic Load Balancer
+- Application Load Balancer
+
+
+
+### Question 28
+
+Which AWS Service can be used to automatically select and deploy operating system software patches automatically across large groups of instances?
+
+- AWS CloudWatch
+- AWS System Centre Configuration Manager
+- AWS Inspector
+- AWS System Manager Patch Manager
+
+
+
+### Question 31
+
+Which AWS Report gives enables you to view line items for each unique combination of AWS product, usage type, and operation that your AWS account uses?
+
+- AWS Artifact
+- AWS Single Bill
+- AWS Cost and Usage Report
+- AWS Cost Management Report
+
+
+
+### Question 33
+
+Which service in AWS protects your virtual network and resources from common Distributed Denial of Service (DDoS) attacks?
+
+- Amazon Macie
+- AWS Shield
+- AWS WAF
+- AWS CloudFront
+
+
+
+### Question 35
+
+Which AWS Database engine offers up to five times faster than standard MySQL databases and three times faster than standard PostgreSQL databases?
+
+- MS SQL
+- Oracle
+- Amazon Aurora :white_check_mark:
+- DynamoDB
+
+
+
+### Question 36
+
+Your company provides an Options market trading service. You wish to run the end of day analysis against the day’s transaction costs, perform execution reporting, and conduct market performance analysis. Which AWS service provides Managed Compute Environments that dynamically provisions and scale compute resources based on the volume and resource requirements of your submitted jobs?
+
+- AWS Lambda
+- AWS Batch :white_check_mark:
+- AWS CloudFront
+- AWS Blockchain
+
+
+
+### Question 38: 
+
+You wish to automatically start your fleet of servers used to an Accounting application every morning at 6 am and then shut down the servers at night at 6 pm. This will help reduce overall costs. You plan to use Cloud Events and create cron/scheduled job for this. Which AWS service can enable you to run a node.js code to perform the actual start and stop request, triggered from the scheduled CloudWatch Events Rule?
+
+- AWS EC2Stop
+- AWS CloudTrail
+- AWS Outpost
+- AWS Lambda
+
+
+
+### Question 43
+
+As part of ensuring operational excellence, you are required to monitor your EC2 service health in terms of load and traffic to and from those servers. Which AWS service will enable you to build dashboards to get a quick one pane health view of your EC2 farm?
+
+- AWS Cognito
+- AWS Config
+- System Centre Configuration Manager (SCCM)
+- AWS CloudWatch :white_check_mark:
+
+#### Explanation
+
+Amazon CloudWatch dashboards enable you to create re-usable graphs and visualize your cloud resources and applications. You can create graph metrics and logs data side by side in a single dashboard pane to quickly get the context and go from diagnosing the problem to understanding the root cause. For example, you can visualize key metrics, like CPU utilization and memory, and compare them to capacity.
+
+The answer, ‘AWS Config’ is incorrect. While Config can enable you to identify historical changes to your resources deployed on AWS, it does not offer the ability to create dashboards of current health states in terms of CPU Utilization, disk read ops, and network bytes in and about type visual representations.
+
+The answer, ‘AWS Cognito’ is incorrect. Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0.
+
+The answer, ‘System Centre Configurations Manager (SCCM)’ is incorrect as there is no such service on AWS. This is a Microsoft tool for managing resource configurations.
+
+Ref: https://youtu.be/a4dhoTQCyRA
+
+### Question 49
+
+Which AWS service enables you to set custom cost and usage budgets to manage your AWS spend more easily?
+
+- AWS Shield
+- AWS Budgets
+- AWS TCO
+- AWS Billing Alarm
+
+
+
+### Question 52
+
+Which feature of the Amazon S3 platform enables you to upload content to a centralized bucket from across any location, such that the data is uploaded via AWS Edge Locations ensuring faster transfer speeds and avoidance of general public Internet congestion?
+
+- Amazon S3 Transfer Acceleration :white_check_mark:
+- Amazon S3 Storage Gateway
+- Amazon Snowball
+- Availability Zones
+
+
+
+### Question 55
+
+Which Elastic Load Balancer is ideal for handling volatile workloads and can scale to millions of requests per second?
+
+- Classic Load Balancer
+- Premium Load Balancer
+- Application Load Balancer
+- Network Load Balancer :white_check_mark:
+
+
+
+### Question 58
+
+Which of the following is true regarding the Amazon Simple Storage Service (Amazon S3)? (Select 2 answers)
+
+- Amazon S3 is Block-Based Storage
+- Amazon S3 can be configured as shared mount volumes for Linux based EC2 Instances
+- Amazon S3 Standard Storage Class offers 99.999999999 Durability :white_check_mark:
+- You can install non-compatible RDS database engines not available on Amazon RDS
+- Amazon S3 is Object-Based Storage :white_check_mark:
+
+
+
+### Question 64: **Incorrect**
+
+Your organization is looking to replace its old desktops and laptops with thin clients and virtual desktop infrastructure in the cloud. Which AWS service offers you the ability to host Windows desktops quickly and at a fraction of the costs of traditional VDI deployments?
+
+- AWS EC2
+- AWS Workspaces :white_check_mark:
+- AWS RDS
+- AWS S3
+
+#### Explanation
+
+Amazon WorkSpaces is a fully managed, secure cloud desktop service. You can use Amazon WorkSpaces to provision either Windows or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across the globe. You can pay either monthly or hourly, just for the WorkSpaces you launch, which helps you save money when compared to traditional desktops and on-premises VDI solutions.
+
+AWS EC2 enables you to deploy virtual servers such as Windows and Linux servers and not desktops so this answer is incorrect.
+
+AWS RDS is a managed database solution and AWS S3 is Amazon Object Storage solutions. These answers are incorrect.
+
+Ref: https://youtu.be/TGXQrk4dmI8
