@@ -37,10 +37,19 @@ if (n <= 1) return x; // the <= is very important as n-2 can lead to -ve number 
 
 - There are ALWAYS **2** return statements in a recursive function
   - One for base case
+  
   - One for recursion
-  - Sometimes you can assign to a variable the recursion, but then you need to return that variable
+  
+  - Sometimes you can assign to a variable the recursion, but then you need to return that variable.
+  
+    
 
-> NOTE: Your base case & recursive case **BOTH** must have a **RETURN** keyword. Recursive function most likely ALWAYS **calls the recursive function, with a diminishing condition**
+> **RULES Summary:** 
+>
+> Recursive Case, Base Case, can be more than 1.
+> Your base case & recursive case **BOTH** must have a **RETURN** keyword. 
+> The **Recursive case** most likely ALWAYS  **returns** the recursive function, with a **diminishing condition**.
+> The **Base case** ALWAYS **returns** the most **simplest task / value.**
 
 ## i. Find the Square of a Number Recursively
 
@@ -102,6 +111,27 @@ var arr = [9, 8, 1, 8, 1, 7];
 var testVariable = 1;
 var currentIndex = 0;
 console.log(firstIndex(arr, testVariable, currentIndex));
+
+// BETTER VERSION
+
+const firstIndex = (arr, testVariable, currentIndex = 0) => { 
+  // returns the first occurrence of testVariable
+  // Base case1
+  if (arr.length == currentIndex) {
+    return -1;
+  }
+  // Base case2
+  if (arr[currentIndex] == testVariable) {
+    return currentIndex;
+  }
+  // Recursive case
+  return firstIndex(arr, testVariable, currentIndex + 1);
+};
+
+// Test Solution
+var arr = [9, 8, 1, 8, 1, 7];
+var testVariable = 7;
+console.log(firstIndex(arr, testVariable));
 ```
 
 ## iii. Write an Algorithm to find the nth Fibonacci Number
