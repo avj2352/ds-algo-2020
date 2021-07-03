@@ -9,7 +9,7 @@ A queue is a collection of items that obeys the principle of first-in/first-out.
 
 > In order to store our items, we'll use an array-held in closure. 
 >
-> **Remember**: Closures wrap over just the variable, **NOT** the value of the variable
+> **Remember**: Closures wrap over just the variable,  **NOT** the value of the variable
 
 Let's start with our enqueue method. We want to keep our collection in the correct order, so we always want to add to the array from one side of it and remove items from the other.
 
@@ -23,7 +23,7 @@ The following table illustrates key points of the Queue Datastructure
 | isEmpty    | using _return arr.length === 0;_  |
 | get length | using _return arr.length_;        |
 
-> NOTE: If we just associate `queue.length` with our `length` key, we'll get the value zero because that's the value of `queue.length`when our object is created because of CLOSURE
+> NOTE: If we just associate `queue.length` with our `length` key, we'll get the value zero because that's the value of `queue.length` when our object is created because of CLOSURE
 >
 > Instead, we want to use a getter function that always returns us the current queue's length.
 

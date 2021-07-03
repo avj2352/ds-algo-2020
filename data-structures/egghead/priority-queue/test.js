@@ -1,4 +1,4 @@
-const createQueue = require('./queue'); 
+const createQueue = require('../queue/queue'); 
 const createPriorityQueue = require('./priority-queue.js');
 // TESTING
 

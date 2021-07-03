@@ -4,9 +4,9 @@
 
 We will use two Queues to create a PriorityQueue, namely - 
 
-- _highQueue_ - Which stands for a High Priority Queue
+- _**highQueue**_ - Which stands for a High Priority Queue
 
-- _lowQueue_ - Which stands for a Low Priority Queue
+- _**lowQueue**_ - Which stands for a Low Priority Queue
 
 Our PriorityQueue data-structure will be the same as a normal Queue. We'll have an `enqueue`, `dequeue`, `peek`, and `isEmpty` method, as well as a `length` property, but we'll make some modification.
 
@@ -29,7 +29,7 @@ function createPriorityQueue () {
 	const highQueue = createQueue();
 	const lowQueue = createQueue();
 	return {
-		// enqueue
+		// enqueue - based on priority
 		enqueue(item, isPriority=false) {
 			if (isPriority) {
 				highQueue.enqueue(item);
@@ -93,4 +93,3 @@ Priority Queue Time Complexity follows the same as that of the Queue, only twice
 | Search    | 0(2n)   | 0(n)       |
 | Insert    | 0(1)    | 0(1)       |
 | Delete    | 0(1)    | 0(1)       |
-
