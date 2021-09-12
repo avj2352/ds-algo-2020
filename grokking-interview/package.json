@@ -1,0 +1,13 @@
+{
+  "name": "educative.io",
+  "version": "1.0.0",
+  "description": "grokking interview questions",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "pramod",
+  "license": "MIT"  
+}

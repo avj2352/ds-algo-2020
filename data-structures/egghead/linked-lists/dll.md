@@ -3,10 +3,10 @@
 **DLLs** have a few advantages over **SLLs**, but these perks do not come without a cost:
 
 - **Doubly linked lists** can be traversed in both directions, which makes them more compatible with complex algorithms.
-- Nodes in **Doubly linked lists** require **extra memory** to store the `previousElement` pointer.
+- Nodes in **Doubly linked lists** require **extra memory** to store the **previousElement** pointer.
 - **Deletion** is more efficient in doubly linked lists as we do not need to keep track of the previous node. We already have a backwards pointer for it.
 
-At this point, we’ve compared the two major types of linked lists. The minor memory load that comes with DLLs can be forgone because of the convenience they provide.
+At this point, we've compared the two major types of linked lists. The minor memory load that comes with DLLs can be forgone because of the convenience they provide.
 
 A Doubly Linked List has a node with the following properties
 

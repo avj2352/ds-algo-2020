@@ -205,9 +205,9 @@ elm.addEventListener('click', () => {
 });
 ```
 
-> Note: React only batches updates when it’s generally safe to do. For example, React ensures that **for each user-initiated event like a click or a keypress, the DOM is fully updated before the next event**. This ensures, for example, that a form that disables on submit can’t be submitted twice.
+> Note: React only batches updates when it’s generally safe to do. For example, React ensures that **for each user-initiated event like a click or a keypress, the DOM is fully updated before the next event**. This ensures, for example, that a form that disables on submit can't be submitted twice.
 
-### What if I don’t want to batch?
+### What if I don't want to batch?
 
 Usually, batching is safe, but some code may depend on reading something from the DOM immediately after a state change. For those use cases, you can use `ReactDOM.flushSync()` to opt out of batching:
 

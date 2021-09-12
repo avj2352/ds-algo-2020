@@ -2,7 +2,7 @@
 
 ##  Important Rule for Recursion with Strings
 
-When it comes to any recursion when dealing with a strings like - where you *most likely deal with the first character* of the string
+When it comes to any recursion when dealing with a strings like - where you *most likely deal with the first character* of the string -
 
 - Remove Duplicate Character (first character of the string)
 - Remove spaces (first character of the string)
